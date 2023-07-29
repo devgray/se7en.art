@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="col-lg-8 text-center">
-                    <img class="img-fluid" src="../img/anatomy of a gray v5.png">
+                    <img onclick="popup(this)" title="Anatomy of a Gray 2023" alt="seems like every year i get lazy with content lolol" src="../img/anatomy of a gray v6 2023 1.png" class="img-fluid" oncontextmenu="return false;">
 
                 </div>
                 
@@ -109,6 +109,22 @@
                     <a href="https://www.youtube.com/channel/UCQJ44JHlnt3OxFtvyOZgteA" target="_blank"><li><i class="fab fa-youtube"></i></li></a>
                 </ol>
                 <small>Copyright &copy; 2016-2023 Se7en. All Rights Reserved</small>
+            </div>
+        </div>
+        <style>
+            .modal-content {
+                /* background-color: transparent; */
+            }
+            .img-wrap{
+                padding-top:20px;
+            }
+        </style>
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <img id="popup-img" src="" class="img-fluid" oncontextmenu="return false;">
+                    <div class="img-content"><h3 id="popup-title"></h3><br><p id="popup-desc"></p></div>
+                </div>
             </div>
         </div>
 

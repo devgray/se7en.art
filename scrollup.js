@@ -17,3 +17,24 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+function popup(a){
+  document.getElementById("popup-img").src=a.src;
+  document.getElementById("popup-title").innerHTML=a.title;
+  document.getElementById("popup-desc").innerHTML=a.alt;
+  $('.modal').modal('show');
+}
+$(document).ready(function() {
+  $(".fadeIn").each(function() {
+      var src = $(this).data("src");
+      if (src) {
+          var img = new Image();
+          img.style.display = "none";
+          img.onload = function() {
+              $(this).fadeIn(1000);
+          };
+          $(this).append(img);            
+          img.src = src;
+      }
+  });
+});
