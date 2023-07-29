@@ -9,10 +9,12 @@
         <meta name="description" content="Yo! I do sub emotes, badges, avatars, twitch and youtube art, character pin-ups, cute stuff, hi lol. Greifx (grey-fix) Pun for my name + graphics. I honestly couldn't think of any punier name than this.">
         <meta name="keywords" content="emote commission, emote commissions, twitch emote commission, grei sub emotes commissions, sub emotes, commission, commissions, grei, greifx, art commission, youtube art, twitch art">
 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
-        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link href="../fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
         <!-- BOOTSTRAP 4.4 -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -25,12 +27,16 @@
 
         <!-- CUSTOM STYLE -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <script src="scrollup.js"></script>
+        <link href="../style.css" rel="stylesheet" type="text/css">
+        <script src="../scrollup.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154565803-1"></script>
         <script>
+        $(function() {
+        AOS.init();
+        });
+
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -39,11 +45,7 @@
         </script>
 
     </head>
-    <script>
-        $(function() {
-             AOS.init();
-        });
-   </script>
+
     <body>
         <div class="container-fluid">
             <div class="row" id="header">
@@ -52,20 +54,20 @@
                     <h1>espresso for the soul</h1>
                     <h5 class="nav">
                             <ol id="nav-mobile">
-                                    <li><a href="/"><i class="fas fa-home"></i></a></li>
-                                    <li><a href="/thanks/"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="/commissions/" id="active"><i class="fas fa-sticky-note"></i></a></li>
+                                    <li><a href="../index.html"><i class="fas fa-home"></i></a></li>
+                                    <li><a href="../thanks/index.html"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="../commissions/index.html" id="active"><i class="fas fa-sticky-note"></i></a></li>
                                     <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
                                     <li><a href="#"><i class="fas fa-store"></i></a></li>
-                                    <li><a href="/about/"><i class="fas fa-question"></i></a></li>
+                                    <li><a href="../about/index.html"><i class="fas fa-question"></i></a></li>
                             </ol>
                             <ol id="nav-desktop">
-                                <li></li><a href="/">my works</a></li>
-                                <li></li><a href="/thanks/">thanks</a></li>
-                                <li></li><a href="/commissions/" id="active">commissions</a></li>
+                                <li></li><a href="../index.html">my works</a></li>
+                                <li></li><a href="../thanks/index.html">thanks</a></li>
+                                <li></li><a href="../commissions/index.html" id="active">commissions</a></li>
                                 <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
                                 <li></li><a href="#">shop</a></li>
-                                <li></li><a href="/about/">about</a></li>
+                                <li></li><a href="../about/index.html">about</a></li>
                         </ol>
                     </h5>
             </div>
@@ -100,7 +102,7 @@
                         <div class="content-body">
                             <h3>Chat Badges<span class='sub-header'> / $50 per set</span></h3>
                             <br>
-                                    <div class="img-wrap text-center" data-aos="fade-in" data-aos-anchor-placement="top-bottom"><img id="emotes" onclick="popup(this)" title="" alt="" src="/img/badges.png"></div>
+                                    <div class="img-wrap text-center" data-aos="fade-in" data-aos-anchor-placement="top-bottom"><img id="emotes" onclick="popup(this)" title="" alt="" src="../img/badges.png"></div>
                             </p>
                             </div>
                     </div>
@@ -114,9 +116,9 @@
                             2-3 weeks turnaround time.<br>
                             Size/s: 500 x 500 px<br><br>
                                 <b>STYLE A</b></p>
-                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="/img/emote type 2.png"></div><br>
+                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="../img/emote type 2.png"></div><br>
                                 <p><b>STYLE B</b></p>
-                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="/img/emote set 1.png"></div>
+                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="../img/emote set 1.png"></div>
                         
                         </div>
                         
@@ -128,8 +130,8 @@
                         <h3>Avatar<span class='sub-header'> / $50-$150</span></h3>
                         <br>
                         <p>headshot, bust up, half or full body with plain background. Extra cost for additional character and a custom background.
-                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="/img/avatar template.png"></div><br>
-                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="/img/avatar template 2.png"></div>
+                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="../img/avatar template.png"></div><br>
+                                <div class="img-wrap text-center" data-aos="fade-in"><img id="emotes" onclick="popup(this)" title="" alt="" src="../img/avatar template 2.png"></div>
                         </p>
                         </div>
                     </div>
@@ -140,7 +142,7 @@
                         <p> 
                             Twitch/Youtube headers, banners, screens, desktop wallpapers, postcards, etc.
                             <br>
-                            <div class="img-wrap" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="/img/illust template.png" class="img-fluid"></div><br>
+                            <div class="img-wrap" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="../img/illust template.png" class="img-fluid"></div><br>
                         </p>
                         </div>
                     </div>
@@ -152,7 +154,7 @@
                             <p> 
                                 <br>
                                 <br>
-                                <div class="img-wrap" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="/img/illust template 2.png" class="img-fluid"></div><br>
+                                <div class="img-wrap" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="../img/illust template 2.png" class="img-fluid"></div><br>
                             </p>
                             </div>
                     </div>
@@ -161,7 +163,7 @@
                         <h3>Axie Trainer Cards<span class='sub-header'> / $100</span></h3>
                         <br>
                         <p>Trainer card with a chosen companion axie. Choose from a set of pre-drawn background in Lunacia.
-                                <div class="img-wrap text-center" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="/img/trainer cards.png" class="img-fluid"></div>
+                                <div class="img-wrap text-center" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="../img/trainer cards.png" class="img-fluid"></div>
                         </p>
                         </div>
                     </div>
@@ -172,7 +174,7 @@
                             <p>Pre-made background <i>(2 additional backgrounds in progress)</i>
                                 <br>
                                 <br>
-                                <div class="img-wrap" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="/img/trainer cards 2.png" class="img-fluid"></div><br>
+                                <div class="img-wrap" data-aos="fade-in"><img onclick="popup(this)" title="" alt="" src="../img/trainer cards 2.png" class="img-fluid"></div><br>
                             </p>
                             </div>
 
