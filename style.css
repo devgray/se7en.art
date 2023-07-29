@@ -242,3 +242,9 @@ p{
     }
    
 }
+@media (max-width:390px){
+    .section-header {
+        margin-top: 50px;
+        height: 80px;
+    }
+}
