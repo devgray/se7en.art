@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>espresso for the soul</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport"
+        content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Yo! I do sub emotes, badges, avatars, twitch and youtube art, character pin-ups, cute stuff, hi lol. Greifx (grey-fix) Pun for my name + graphics. I honestly couldn't think of any punier name than this.">
+        <meta name="keywords" content="emote commission, emote commissions, twitch emote commission, grei sub emotes commissions, sub emotes, commission, commissions, grei, greifx, art commission, youtube art, twitch art">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+        <!-- BOOTSTRAP 4.4 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- AOS LIBRARY -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- CUSTOM STYLE -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet" type="text/css">
+        <script src="/scrollup.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154565803-1"></script>
+        <script>
+            
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154565803-1');
+
+        $(function() {
+             AOS.init();
+        });
+        </script>
+        <script>
+            function popup(a){
+                document.getElementById("popup-img").src=a.src;
+                document.getElementById("popup-title").innerHTML=a.title;
+                document.getElementById("popup-desc").innerHTML=a.alt;
+                $('.modal').modal('show');
+            }
+            $(document).ready(function() {
+                $(".fadeIn").each(function() {
+                    var src = $(this).data("src");
+                    if (src) {
+                        var img = new Image();
+                        img.style.display = "none";
+                        img.onload = function() {
+                            $(this).fadeIn(1000);
+                        };
+                        $(this).append(img);            
+                        img.src = src;
+                    }
+                });
+            });
+        </script>
+
+
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+                <div class="row" id="header">
+                        <div class="col-sm-12 text-center flex-column section-header">
+                                <!-- <img onclick="popup(this)" title="" alt="" src="img/avi.png" class="rounded mx-auto d-block avatar" alt="..."> -->
+                                <h1>espresso for the soul</h1>
+                                <h5 class="nav">
+                                        <ol id="nav-mobile">
+                                                <li><a href="/" id="active"><i class="fas fa-home"></i></a></li>
+                                                <li><a href="/thanks/"><i class="far fa-heart"></i></a></li>
+                                                <li><a href="/commissions/"><i class="fas fa-sticky-note"></i></a></li>
+                                                <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
+                                                <li><a href="#"><i class="fas fa-store"></i></a></li>
+                                                <li><a href="/about/"><i class="fas fa-question"></i></a></li>
+                                        </ol>
+                                        <ol id="nav-desktop">
+                                                <li></li><a href="/" id="active">my works</a></li>
+                                                <li></li><a href="/thanks/">thanks</a></li>
+                                                <li></li><a href="/commissions/">commissions</a></li>
+                                                <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
+                                                <li></li><a href="#">shop</a></li>
+                                                <li></li><a href="/about/">about</a></li>
+                                        </ol>
+                                </h5>
+                        </div>
+                    </div>
+                    
+                    
+                    
+            <style>
+                .col-md-2{
+                    padding:0;
+                }
+                .image-thumbnails .animate{
+                        opacity: 1;
+                        -webkit-transition: opacity .5s ease-in-out;
+                    }
+                .image-thumbnails img{
+                    padding:5px;
+                    border-radius:2em;
+                    opacity: 0}
+            </style>
+            <div class="img-loader text-center mt-5" hidden>
+                <p>Loading...</p>
+            </div>
+            <div class="row image-thumbnails">
+<!-- ROW 1 -->
+                <div class="col-md-2 col-sm-3 col-sm-6">
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Fuxel Postcard" alt="Commissioned by twitch.tv/FuxelBau" src="img/Foxes Postcard.png" class="img-fluid fadeIn" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Level Up NFT" alt="Trait leek twitter.com/LevelUp_NFT" src="img/nft sample 17.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Unstateschool Class" alt="Commissioned by twitter.com/unstatesloth" src="img/unstatesloth class.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Tasty Bones Nood" alt="" src="img/Tasty Bones Nood.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Frey" alt="Original character named Frey" src="img/frey wallpaper.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Random doodle?" alt="" src="img/glomp.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Random doodle?" alt="" src="img/emote avi.png" class="img-fluid" oncontextmenu="return false;"></div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-sm-6">
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Jay Bean" alt="I made this for a friend with the Azuki NFT style." src="img/honorable azuki jay.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Level Up NFT" alt="Illustration made for twitter.com/LevelUp_NFT" src="img/INTRO.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="2023 Remake" alt="https://twitter.com/0xSe7en_/status/1621230469244420096?s=20" src="img/dave 2023.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Noodie House" alt="Art made for the Noodies" src="img/Noodie House v2.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="EnjoyClorox" alt="Commissioned by twitch.tv/EnjoyClorox" src="img/EnjoyClorox avatar.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Blackpink JenLisa" alt="JenLisa Holiday fanart" src="img/jenlisa xmas selfie.png" class="img-fluid" oncontextmenu="return false;"></div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-sm-6">
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Caleb Hyles" alt="Commissioned by youtube.com/@CalebHyles" src="img/Caleb Hyles cover v2.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Warm and Cozy" alt="Made for fb.com/Dooshenshmirtz" src="img/cat sleep.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Axie Gank Team" alt="Commissioned by Gank OSWA" src="img/axie gank banner.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Thiccbalang" alt="Fanart made for Aswang Tribe" src="img/thiccbalang.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Random doodle?" alt="" src="img/test project.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Anatomy of a Gray 2020" alt="" src="img/anatomy of a gray v5.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Blackpink JenLisa" alt="JenLisa fanart for Vday" src="img/jenlisa vday.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        
+                </div>
+                <div class="col-md-2 col-sm-3 col-sm-6">
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Axie Law of Potion" alt="My entry for Axie44 fanart contest https://twitter.com/0xSe7en_/status/1449855127347613696?s=20" src="img/axie law of potion.gif" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Level Up NFT Events" alt="Illustration made for twitter.com/LevelUp_NFT" src="img/Events happening this week.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="MAYC Nood" alt="" src="img/MAYC Nood 2.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Open world?" alt="feat. 711" src="img/gamer duo.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="ACNH x Axie Infinity" alt="feat. 711" src="img/ACNH x Axie Infinity.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="EricMrStruggle" alt="Avatar commission" src="img/EricMrStruggle avatar.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Kumo x World Nood" alt="" src="img/Kumo x World Nood.png" class="img-fluid" oncontextmenu="return false;"></div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-sm-6">
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Cat Deck" alt="Commissioned by twitch.tv/Spiritendo" src="img/Cat Deck.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Roughed Up" alt="Old commission from DeviantArt." src="img/roughed up.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Sleepy Trainer" alt="My artsona with my first axie named RTM" src="img/sleepy trainer.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Freefall" alt="Remake of an old art I made years ago." src="img/freefall copy.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="The Legion Fanart" alt="A killer from the game Dead by Daylight." src="img/legion.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Unstatsloth" alt="Logo commissioned by twitter.com/unstatesloth" src="img/unstatesloth logo.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Axie Team" alt="Commissioned by Chayawassa" src="img/AXIE TEAM chayawassa.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        
+                </div>
+                <div class="col-md-2 col-sm-3 col-sm-6">
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Blue Flame Oni" alt="Fanart commission" src="img/@dash144_ commission 6 edited.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Level Up NFT" alt="Trait leek twitter.com/LevelUp_NFT" src="img/nft sample 11.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Dooshenshmirtz" alt="Logo made for fb.com/Dooshenshmirtz" src="img/dooshen logo.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Crypto Flash" alt="Commissioned by twitter.com/CryptosFlash" src="img/crypto flash action.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Axie Trainers" alt="feat. 711" src="img/axie trainers.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        <div class="img-wrap"><img onload="this.className='animate'" onclick="popup(this)" title="Random doodle?" alt="" src="img/eins time 2.png" class="img-fluid" oncontextmenu="return false;"></div>
+                        
+                        
+                </div>
+
+            </div><!-- END OF IMAGE THUMBNAILS-->
+        </div>
+        <div onclick="topFunction()" id="myBtn" title="Go to top" style="display:none;"><div class="d-flex flex-column justify-content-center text-center"><i class="fas fa-angle-up fa-lg"></i></div></div>
+        
+
+        <!-- MODALS -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <img id="popup-img" src="" class="img-fluid" oncontextmenu="return false;">
+                    <div class="img-content" id="imc-1"><h3 id="popup-title"></h3><br><p id="popup-desc"></p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links text-center">
+                <ol>
+                    <a href="https://www.facebook.com/grei.draws/" target="_blank"><li><i class="fab fa-facebook"></i></li></a>
+                    <a href="https://www.instagram.com/grei.draws/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="https://twitter.com/0xSe7en_" target="_blank"><li><i class="fab fa-twitter"></i></li></a>
+                    <a href="https://www.twitch.tv/grei" target="_blank"><li><i class="fab fa-twitch"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCQJ44JHlnt3OxFtvyOZgteA" target="_blank"><li><i class="fab fa-youtube"></i></li></a>
+                </ol>
+                <small>Copyright &copy; 2016-2023 Se7en. All Rights Reserved</small>
+            </div>
+        </div>
+
+    </body>
+</html>
