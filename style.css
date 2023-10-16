@@ -1,10 +1,10 @@
 @font-face {
     font-family: ProductSans;
-    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    src: url(/fonts/ProductSansRegular.ttf);
 }
 @font-face {
     font-family: ProductSansBold;
-    src: url(/fonts/Product\ Sans\ Bold.ttf);
+    src: url(/fonts/ProductSansBold.ttf);
 }
 *{
     font-family: ProductSans;
