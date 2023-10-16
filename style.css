@@ -92,7 +92,7 @@ p{
     width:100%;
     filter: grayscale(100);
 }
-.image-thumbnails img:hover{
+.image-thumbnails .img-wrap:hover > img{
     filter:none;
     cursor: pointer;
     transition: transform .2s;
