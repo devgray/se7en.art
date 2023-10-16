@@ -35,7 +35,6 @@ $(document).ready(function() {
           };
           $(this).append(img);            
           img.src = src;
-          img.setAttribute("draggable", false);
       }
   });
 });
