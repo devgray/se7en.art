@@ -55,18 +55,18 @@
                     <h5 class="nav">
                             <ol id="nav-mobile">
                                     <li><a href="../"><i class="fas fa-home"></i></a></li>
-                                    <li><a href="../thanks/" id="active"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="../thanks/"><i class="far fa-heart"></i></a></li>
                                     <li><a href="../commissions/"><i class="fas fa-sticky-note"></i></a></li>
                                     <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
-                                    <li><a href="../twitch/"><i class="fab fa-twitch"></i></a></li>
+                                    <li><a href="../twitch/" id="active"><i class="fab fa-twitch"></i></a></li>
                                     <li><a href="../about/"><i class="fas fa-question"></i></a></li>
                             </ol>
                             <ol id="nav-desktop">
                                 <li><a href="../">my works</a></li>
-                                <li><a href="../thanks/" id="active">thanks</a></li>
+                                <li><a href="../thanks/" >thanks</a></li>
                                 <li><a href="../commissions/">commissions</a></li>
                                 <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
-                                <li><a href="../twitch/">twitch</a></li>
+                                <li><a href="../twitch/"id="active">twitch</a></li>
                                 <li><a href="../about/">about</a></li>
                         </ol>
                     </h5>
@@ -83,6 +83,7 @@
             .content-body{
                 border:solid #c0c0c0 1px;
                 margin-bottom: 30px;
+                border-radius:0;
             }
             .content-body p{
                 margin:20px;
@@ -104,6 +105,7 @@
                 margin-bottom: 0;
                 padding:20px;
             }
+            
         </style>
         <div class="container">
             
@@ -111,13 +113,21 @@
             <div class="row section-body">
                 
                 <div class="col-sm-12"><div class="content-body">
-                    <p>
-                        Forever grateful to these people who have supported me big time throughout my artventures (from DeviantArt, Twitch, to Web3.) Some I met years ago and became a friend;
-                        some have always trusted me and my works, and some still does; 
-                        some gave me an opportunity for a new experience.<br>
-                        <br>
-                        Thank you. Salamat. ありがとう. Danke. 谢谢. 감사합니다. ขอบคุณค่ะ.
-                    </p>
+                    <div id="twitch-embed"></div>
+
+                    <!-- Load the Twitch embed JavaScript file -->
+                    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+                    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+                    <script type="text/javascript">
+                    new Twitch.Embed("twitch-embed", {
+                        width: 1100,
+                        height: 450,
+                        channel: "grei",
+                        // Only needed if this page is going to be embedded on other websites
+                        parent: ["embed.example.com", "othersite.example.com"]
+                    });
+                    </script>
                 </div></div>
 
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
