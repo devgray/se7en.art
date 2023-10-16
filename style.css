@@ -154,16 +154,16 @@ p{
     margin-bottom:0;
 }
 .img-wrap{
-    position:relative;
+    cursor: pointer;
     padding:0px;
+    border-radius:10em;
+    
     /* overflow: hidden; */
 }
-.img-wrap:first-child{
-    position: relative;
+.img-wrap img{
+    border-radius:1em;
 }
-.img-wrap:last-child{
-    position:absolute;
-}
+
 .img-content{
     /* display: none; */
     /* border-radius:10em;
