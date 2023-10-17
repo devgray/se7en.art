@@ -23,6 +23,22 @@ function topFunction() {
 function popup(a){
   a = a.firstChild;
   //alert(a);
+  or = a.getAttribute('or');
+  x = document.getElementById("modal");
+  if( or == 0){
+    x.classList.remove('landscape');
+    x.classList.remove('box');
+    x.classList.add('portrait');
+  }
+  else if(or == 1){
+    x.classList.remove('portrait');
+    x.classList.remove('box');
+    x.classList.add('landscape');
+  }else{
+    x.classList.remove('landscape');
+    x.classList.remove('portrait');
+    x.classList.add('box');
+  }
   document.getElementById("popup-img").src=a.src;
   document.getElementById("popup-title").innerHTML=a.title;
   document.getElementById("popup-desc").innerHTML=a.alt;

@@ -11,6 +11,9 @@
     padding:0;
     /* line-height:2.5em; */
 }
+b{
+    font-family: ProductSansBold;
+}
 #nav-mobile{
     display: none;
 }
@@ -264,5 +267,16 @@ p{
     .section-header {
         margin-top: 50px;
         height: 80px;
+    }
+}
+@media (min-width: 992px){
+    .modal-lg, .modal-xl {
+    max-width: 600px;
+    }
+    .landscape{
+        max-width: 800px;
+    }
+    .portrait{
+        max-width: 400px;
     }
 }

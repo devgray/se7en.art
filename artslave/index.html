@@ -55,18 +55,18 @@
                     <h5 class="nav">
                             <ol id="nav-mobile">
                                     <li><a href="../"><i class="fas fa-home"></i></a></li>
-                                    <li><a href="../thanks/"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="../thanks/" id="active"><i class="far fa-heart"></i></a></li>
                                     <li><a href="../commissions/"><i class="fas fa-sticky-note"></i></a></li>
                                     <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
-                                    <li><a href="../twitch/" id="active"><i class="fab fa-twitch"></i></a></li>
+                                    <li><a href="../twitch/"><i class="fab fa-twitch"></i></a></li>
                                     <li><a href="../about/"><i class="fas fa-question"></i></a></li>
                             </ol>
                             <ol id="nav-desktop">
                                 <li><a href="../">my works</a></li>
-                                <li><a href="../thanks/" >thanks</a></li>
+                                <li><a href="../thanks/" id="active">thanks</a></li>
                                 <li><a href="../commissions/">commissions</a></li>
                                 <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
-                                <li><a href="../twitch/"id="active">twitch</a></li>
+                                <li><a href="../twitch/">twitch</a></li>
                                 <li><a href="../about/">about</a></li>
                         </ol>
                     </h5>
@@ -81,24 +81,11 @@
                 
             }
             .content-body{
-                min-height:300px;
                 border:solid #c0c0c0 1px;
                 margin-bottom: 30px;
-                border-radius:1em;
-            }
-            .content-body .footer{
-                font-size:12px;
             }
             .content-body p{
-                padding:20px;
-                background:#ececec;
-                min-height:150px;
-            }
-            .content-body .footer{
-                position: absolute;
-                bottom:20px;
-                left:40px;
-                
+                margin:20px;
             }
             .section-body a{
                 color: black;
@@ -113,74 +100,87 @@
                 margin-left:5px;
             }
             h3{
-                min-height:90px;
                 font-size:20px;
                 margin-bottom: 0;
                 padding:20px;
             }
-            
         </style>
         <div class="container">
             
 
             <div class="row section-body">
                 
-                <div class="col-sm-12">
-                    <div id="twitch-embed"></div>
+                <div class="col-sm-12"><div class="content-body">
+                    <p>
+                        Project !artslave
+                    </p>
+                </div></div>
 
-                    <!-- Load the Twitch embed JavaScript file -->
-                    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-                    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-                    <script type="text/javascript">
-                    new Twitch.Embed("twitch-embed", {
-                        width: 1100,
-                        height: 450,
-                        channel: "grei",
-                        // Only needed if this page is going to be embedded on other websites
-                        parent: ["embed.example.com", "othersite.example.com"]
-                    });
-                    </script>
-                </div>
-                <!-- <div> -->
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <div class="content-body">
-                        <h3>EMOOOOOTES!
-                        </h3>
-                        <p>Redeem 1 custom emote for <b>5,000</b> Coffee Beans</p>
-                        <span class="footer">Available: Unlimited</span>
+                    <div class="content-body" style="border-color:gold;">
+                        <h3><img class="img-fluid" src="../img/avi/jerikuto.jpg">Jerikuto<span class='sub-header'>
+                        </span></h3>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <div class="content-body">
-                        <h3>Draw me, slave.
-                        </h3>
-                        <p>Redeem 1 bust up avatar/character commission of any style for <b>15,000</b> Coffee Beans</p>
-                        <span class="footer">Available: 2</span>
-
-                    </div>
+                    <a href="https://www.twitch.tv/spiritendo" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/spiritendo.jpg">Spiritendo<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
                 </div>
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <div class="content-body">
-                        <h3>Paint me like one of your french girls.
-                        </h3>
-                        <p>Redeem 1 full body avatar/character commission of any style for <b>30,000</b> Coffee Beans</p>
-                        <span class="footer">Available: 2</span>
-
-                    </div>
+                    <a href="https://www.twitter.com/CryptoJohnLocke" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/cryptojohnlocke.png">CryptoJohnLocke<span class='sub-header'>
+                            <i class="fab fa-twitter"></i>
+                        </span></h3>
+                    </div></a>
                 </div>
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <div class="content-body">
-                        <h3>1080p
-                        </h3>
-                        <p>Redeem 1 full illustration in wallpaper/banner size of any style for <b>100,000</b> Coffee Beans</p>
-                        <span class="footer">Available: 1</span>
-                    </div>
+                    <a href="https://www.twitch.tv/fuxelbau" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/fuxel.jpg">Fuxel<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
+                </div>
+                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
+                    <a href="https://www.twitch.tv/dodorododo" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/dodorododo.jpg">Dodo & Sleepy<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
+                </div>
+                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
+                    <a href="https://www.twitch.tv/flynn" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/flynn.png">Flynn<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
                 </div>
                 
-
+                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
+                    <a href="https://www.twitch.tv/darkviperau" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/dark.png">DarkViperAU<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
+                </div>
                 
-            <!-- </div>HIDDEN DIV -->
+                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
+                    <a href="https://www.twitch.tv/locomocha" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/locomocha.png">Locomocha<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
+                </div>
+
+                <!-- SHOUTOUTS -->
+                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
+                    <div class="content-body">
+                        <h3>Chayawassa & Axiedoc<span class='sub-header'>
+                        </span></h3>
+                    </div>
+                </div>
 
             </div>
         </div>
