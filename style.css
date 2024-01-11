@@ -269,6 +269,12 @@ p{
         height: 80px;
     }
 }
+@media (max-width:430px){
+    .section-header {
+        margin-top: 50px;
+        height: 80px;
+    }
+}
 @media (min-width: 992px){
     .modal-lg, .modal-xl {
     max-width: 600px;
