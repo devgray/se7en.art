@@ -15,8 +15,8 @@
     position: absolute;
 }.pfp-options{
     min-width:450px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    /* margin-right: 20px; */
 }
 .pfpbtn{
     z-index: 10;
@@ -89,7 +89,7 @@
     width:240px;
 }
 .pfpbtn:hover{
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.1);
 }
 .pfp-options{
     /* margin-left:50px; */
