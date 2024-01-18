@@ -177,8 +177,7 @@ h3{
     padding:20px;
 }
 .ads-footer{
-    background-color: #c0c0c0;
-    height:100px;
+    background-color: rgba(0,0,0,.05);
     width:700px;
     margin-top:50px;
 }
