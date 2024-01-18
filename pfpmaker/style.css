@@ -176,6 +176,13 @@ h3{
     margin-bottom: 0;
     padding:20px;
 }
+.ads-footer{
+    background-color: #c0c0c0;
+    height:100px;
+    width:700px;
+    margin-top:50px;
+}
+
 @media (max-width: 1200px){
     .op h6{
         font-size: 130%;
