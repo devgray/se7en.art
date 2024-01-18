@@ -16,22 +16,46 @@ var busttype;
 function download(){
     console.log("starting download...");
     pfp = document.querySelector("#pfp");
-    html2canvas(pfp).then(canvas => {
+    pfp.style.width= "1000px";
+    pfp.style.height= "1000px";
+    document.getElementById("bg").style.borderRadius = "0em";
+    html2canvas(pfp, {scale: 1,dpi:144, width: 1000,height:1000}).then(canvas => {
         console.log(canvas);
         var img = new Image(), 
             can=document.createElement('canvas');
-
+            
         can=canvas;
 
-        img.style.webkitTransformOrigin= "left bottom";
-        img.id = "printable";
+        // img.style.webkitTransformOrigin= "left bottom";
+        // img.id = "printable";
         // img.style.webkitTransform = "translateY(-100%) rotate(90deg)";
         // img.src = can.toDataURL();
-        downloadImage(can.toDataURL("image/png", 1.0));
+        /* downloadImage(can.toDataURL("image/png", 1.0)); */
         
-        //document.location.href = can.toDataURL("image/png",1.0).replace("image/png", "image/octet-stream");
-        //var myWindow = window.open("", "_blank", "width=600,height=600,top="+(screen.height-screen.height/1.3)+",left="+(screen.width-screen.width/1.6));
-        //myWindow.document.body.appendChild(img);
+        // document.location.href = can.toDataURL("image/png",1.0).replace("image/png", "image/octet-stream");
+        var myWindow = window.open("", "_blank", "width=1400,height=1030,top="+(screen.height-screen.height/1.1)+",left="+(screen.width-screen.width/1.2))
+        var element = myWindow.document.createElement('div');
+        // element.type='text/javascript';
+        // element.innerHTML = 
+        myWindow.document.open();
+        // download page ad unit
+        myWindow.document.write(
+          '<div class="ads-side" style="position:fixed;right:0;width:380px;height:1000px;background-color:rgba(0,0,0,.05);">'
+          +  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6805605795676003" crossorigin="anonymous"></script>'
+          +  '<ins class="adsbygoogle"'
+          +  'style="display:block"'
+          +  'data-ad-client="ca-pub-6805605795676003"'
+          +  'data-ad-slot="1992610031"'
+          +  'data-ad-format="auto"'
+          +  'data-full-width-responsive="true"></ins>'
+          +  '<script>'
+          +  '(adsbygoogle = window.adsbygoogle || []).push({});'
+          +  '</script>'
+          +  '</div>'
+        );
+        myWindow.document.close();
+        // myWindow.document.body.appendChild(element);
+        myWindow.document.body.appendChild(can);
         // document.body.appendChild(canvas)
         // window.open("", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));
         // win.document.body.innerHTML = canvas;
@@ -43,6 +67,9 @@ function download(){
     // link.click();
     
     console.log("downloaded");
+    pfp.style.width= "500px";
+    pfp.style.height= "500px";
+    document.getElementById("bg").style.borderRadius = "2em";
 }
 
 function downloadImage(data, filename = 'untitled.png') {

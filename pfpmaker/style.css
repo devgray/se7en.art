@@ -1,23 +1,33 @@
+.section-body{
+    margin-top:25px;
+}
 .pfp-box{
     height:500px;
     width:500px;
     z-index: 10;
+    
 }
 .bounding-box{
+    border-radius:2em;
     background-size: cover;
-    height:500px;
-    width:500px;
+    height:inherit;
+    width:inherit;
     position: absolute;
+}.pfp-options{
+    min-width:450px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .pfpbtn{
     z-index: 10;
     font-size:130%;
-    position:absolute;
-    color:black;
-    border:1px solid black;
+    margin-left:10px;
+    margin-top:10px;
+    color:#1a1a1a;
+    border:1px solid #c0c0c0;
     height:50px;
     width:50px;
-    border-radius:.2em;
+    border-radius:.5em;
 }
 #downloadBtn{
     /* display:none; */
@@ -30,28 +40,28 @@
     left:456px;
 }
 .extrabtn:hover{
-    color:#09d0d0;
-    border-color:#09d0d0;
+    color:red;
+    border-color:red;
 }
 .extrabtn{
     display: none;
-    position:absolute;
     color:#c0c0c0;
     border-radius: 1em;
     font-weight: normal;
     font-size: 80%;
-    height: 30px;
-    width:30px;
+    height: 22px;
+    width:22px;
     border: 1px solid #c0c0c0;
     cursor: pointer;
+    margin-left:10px;
 }
 .removeOuter{
     right:460px;
     bottom: 53px;
 }
 .removeShirt{
-    right:460px;
-    bottom: 98px;
+    right:880px;
+    top: 40px;
 }
 .swatch{
     margin: 0 5px;
@@ -88,12 +98,12 @@
     display: flex;
     align-items: center!important;
     justify-content: center !important;
-    height:45px;
+    height:40px;
 }
 .op h6{
     font-weight: bold;
     width:200px;
-    font-size:130%;
+    font-size:120%;
     padding:5px;
     margin:0;
 }
