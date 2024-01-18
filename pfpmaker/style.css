@@ -14,9 +14,17 @@
     width:inherit;
     position: absolute;
 }.pfp-options{
+    border: solid 1px rgba(0,0,0,.1);
+    padding:25px;
+    border-radius:1em;
     min-width:450px;
     margin-left: 40px;
     /* margin-right: 20px; */
+}
+.donate{
+    border: solid 1px rgba(0,0,0,.1);
+    padding:25px;
+    border-radius:2em;
 }
 .pfpbtn{
     z-index: 10;
@@ -24,7 +32,7 @@
     margin-left:10px;
     margin-top:10px;
     color:#1a1a1a;
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,.1);
     height:50px;
     width:50px;
     border-radius:.5em;
@@ -95,6 +103,7 @@
     /* margin-left:50px; */
 }
 .op{
+    text-transform: lowercase;
     display: flex;
     align-items: center!important;
     justify-content: center !important;
