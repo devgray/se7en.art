@@ -96,9 +96,9 @@
                 </div></div>
 
                 
-                <div class="col-sm-12 d-flex justify-content-center">
-                        <div class="pfp-container">
-                        <div class="pfp-box" id="pfp">
+                <div class="col-sm-12 d-flex justify-content-center"><div class="row">
+                        <div class="pfp-container col-lg-4 col-md-6 col-sm-12">
+                        <div class="pfp-box img-fluid" id="pfp">
 
                             <div class="bounding-box bg" id="bg"></div>
                             <div class="bounding-box skin"></div>
@@ -113,54 +113,73 @@
                         <div class="pfpbtnsets d-flex justify-content-end">
                             <div type="button" class="button d-flex align-items-center justify-content-center pfpbtn" id="downloadBtn" onclick="download()"><i class="fas fa-save"></i></div>
                             <div type="button" class="button d-flex align-items-center justify-content-center pfpbtn" id="randomBtn" onclick="loadRandom()"><i class="fas fa-random"></i></div>
-                        </div></div>
-                    <div class="pfp-options">
-                        <div class="op"><h6>BODY TYPE</h6><div class="opBtn left"><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type">0</div><div class="opBtn right"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
-                        <hr>
-                        <div class="op"><h6>SKIN</h6><div class="opBtn left" name="skin" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type skin" ></div><div class="opBtn right" name="skin" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>SKIN MARK</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>TATTOO</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <hr>
-                        <div class="op"><h6>EYES</h6><div class="opBtn left" name="eyes" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type eyes" ></div><div class="opBtn right" name="eyes" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>NOSE</h6><div class="opBtn left" name="nose" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type nose"></div><div class="opBtn right" name="nose" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>MOUTH</h6><div class="opBtn left" name="mouth" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type mouth"></div><div class="opBtn right" name="mouth" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>HAIR</h6><div class="opBtn left" name="hair" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type hair"></div><div class="opBtn right" name="hair" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <hr>
-                        <div class="op"><h6>HAIR COLOR</h6><div class="colorsets d-flex">
-                            <div class="swatch brown" name="brown" value="0" onclick="setColor(this)"></div>
-                            <div class="swatch blonde" name="blonde" value="1" onclick="setColor(this)"></div>
-                            <div class="swatch grey" name="grey" value="2" onclick="setColor(this)"></div>
-                            <div class="swatch orange" name="orange" value="3" onclick="setColor(this)"></div></div></div>
-                        <!-- <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6><div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div>SHIRT</h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6><div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div>OUTERWEAR</h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket"></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div> -->
-                    
-                    </div>
-                    <div class="pfp-options">
-                        <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6 class="d-flex">SHIRT<div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6 class="d-flex">OUTERWEAR<div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket"></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                        </div>
                         
-                        <hr>
-                        <div class="op"><h6>HELD ITEM</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>PET</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                        <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                    
                     </div>
+                    <div class="pfp-options col-lg-4 col-md-6 col-sm-12">
+                        <div class="pfpset">
+                            <div class="op"><h6>BODY TYPE</h6><div class="opBtn left"><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type">0</div><div class="opBtn right"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
+                        </div>
+
+                        <div class="pfpset">
+                            <div class="op"><h6>SKIN</h6><div class="opBtn left" name="skin" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type skin" ></div><div class="opBtn right" name="skin" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>SKIN MARK</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>TATTOO</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                        </div>
+
+                        <div class="pfpset">
+                            <div class="op"><h6>EYES</h6><div class="opBtn left" name="eyes" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type eyes" ></div><div class="opBtn right" name="eyes" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>NOSE</h6><div class="opBtn left" name="nose" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type nose"></div><div class="opBtn right" name="nose" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>MOUTH</h6><div class="opBtn left" name="mouth" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type mouth"></div><div class="opBtn right" name="mouth" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>HAIR</h6><div class="opBtn left" name="hair" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type hair"></div><div class="opBtn right" name="hair" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                        </div>
+                        <div class="pfpset">
+                            <div class="op"><h6>HAIR COLOR</h6><div class="colorsets d-flex">
+                                <div class="swatch brown" name="brown" value="0" onclick="setColor(this)"></div>
+                                <div class="swatch blonde" name="blonde" value="1" onclick="setColor(this)"></div>
+                                <div class="swatch grey" name="grey" value="2" onclick="setColor(this)"></div>
+                                <div class="swatch orange" name="orange" value="3" onclick="setColor(this)"></div></div></div>
+                            <!-- <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6><div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div>SHIRT</h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6><div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div>OUTERWEAR</h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket"></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div> -->
+                        </div>
+                        
+                    </div>
+
+                    <div class="pfp-options col-lg-4 col-md-6 col-sm-12">
+                        <div class="pfpset">
+                            <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6 class="d-flex">SHIRT<div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6 class="d-flex">OUTERWEAR<div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket"></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                        </div>
+                        <div class="pfpset">
+                            <div class="op"><h6>Accessory</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>HELD ITEM</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>PET</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                        </div>
+                    </div>
+                    
 
                     
                     
-                </div>
+                </div></div>
+
+                <div class="col-sm-12 d-flex justify-content-center"><div class="row">
+                    
+                    <div class="pfp-options col-lg-4 col-md-6 col-sm-12">
+                        
+                    </div>
+                </div></div>
+                
                 
 
 
             </div>
         </div>
         <div class="container">
-                <div class="col-sm-12 donate">
-
-                </div>
+                
                 
             <div class="col-sm-12 d-flex justify-content-center">
                 <div class="ads-footer">

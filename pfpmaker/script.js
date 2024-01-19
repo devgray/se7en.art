@@ -67,8 +67,8 @@ function download(){
     // link.click();
     
     console.log("downloaded");
-    pfp.style.width= "500px";
-    pfp.style.height= "500px";
+    pfp.style.width= "450px";
+    pfp.style.height= "450px";
     document.getElementById("bg").style.borderRadius = "2em";
 }
 
