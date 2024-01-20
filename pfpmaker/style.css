@@ -2,8 +2,8 @@
     margin-top:25px;
 }
 .pfp-box{
-    height:450px;
-    width:450px;
+    height:500px;
+    width:500px;
     z-index: 10;
     
 }
@@ -30,7 +30,8 @@
     margin-bottom:1rem;
     padding:20px;
     border-radius:1em;
-    border: solid 1px rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.025);
+    /* border: solid 1px rgba(0,0,0,.1); */
 }
 .pfpbtn{
     z-index: 10;
@@ -38,10 +39,11 @@
     margin-right:10px;
     margin-top:10px;
     color:#1a1a1a;
-    border:1px solid rgba(0,0,0,.1);
+    /* border:1px solid rgba(0,0,0,.1); */
     height:50px;
     width:50px;
     border-radius:.5em;
+    background-color: rgba(0,0,0,.025);
 }
 #donate{
     width:350px;
@@ -87,8 +89,14 @@
     border-radius: 10em;
     cursor: pointer;
 }
-.swatch.active{
-    border: 4px inset white;
+.swatch.haircolor.active{
+    /* border: 4px inset white; */
+    border: 3px solid white;
+    outline: 5px solid #c0c0c0;
+}
+.swatch.skincolor.active{
+    border: 3px solid white;
+    outline: 5px solid #c0c0c0;
 }
 .swatch.brown{
     background-color: #452d25;
@@ -103,7 +111,20 @@
     background-color: #ae471a;
 }
 .colorsets{
-    width:240px;
+    width:350px;
+}
+/* SKIN COLORS */
+.swatch.pale{
+    background-color: #ffe5dc;
+}
+.swatch.light{
+    background-color: #ffd0b4;
+}
+.swatch.tan{
+    background-color: #efb698;
+}
+.swatch.dark{
+    background-color: #614046;
 }
 .pfpbtn:hover{
     background-color: rgba(0,0,0,.1);
@@ -120,7 +141,7 @@
 }
 .op h6{
     font-weight: bold;
-    width:200px;
+    width:150px;
     font-size:120%;
     padding:5px;
     margin:0;
@@ -129,10 +150,11 @@
     display: flex;
     align-items: center!important;
     justify-content: center !important;
-    border:1px solid #c0c0c0;
-    width:100px;
+    border:1px solid rgba(0,0,0,.1);
+    /* background-color: rgba(0,0,0,.03); */
+    width:200px;
     height:30px;
-    border-radius:.3em;
+    border-radius: .5em;
     margin: 0 20px;
 }
 .opBtn{
