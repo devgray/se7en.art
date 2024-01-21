@@ -1,17 +1,17 @@
 //script for pfpmaker
-var bgArray = [0,1];
+var bgArray = ["beige","vampire grey"];
 var skinArray = [0,1,2,3];
 // var eyesArray = [0,1,2];
 var eyesArray = ["sexy","focused","bill cipher"]
-var noseArray = [0];
-var mouthArray = [0,1];
+var noseArray = ["normal","pointy"];
+var mouthArray = ["happy","laugh"];
 var hairArray = [0,1,2];
 var hairColorArr = ["brown","blonde","grey","orange"];
 var skinColorArr = ["pale","light","tan","dark"];
 var bustArray = ["type a","type b"];
 var femShirtArr = ["none","plain white","valorant black"];
 var neutShirtArr = ["none","plain white","valorant black"];
-var jacketArray = [0,1,2,3];
+var jacketArray = ["none","sleeveless","hoodie mineral green","hoodie nile blue"];
 var haircolorname;
 var skincolorname;
 var busttype;
@@ -19,6 +19,7 @@ var busttype;
 function download(){
     console.log("starting download...");
     pfp = document.querySelector("#pfp");
+    document.querySelector(".bounding-box.outline").style.display ="none";
     pfp.style.width= "1000px";
     pfp.style.height= "1000px";
     document.getElementById("bg").style.borderRadius = "0em";
@@ -73,6 +74,7 @@ function download(){
     pfp.style.width= "500px";
     pfp.style.height= "500px";
     document.getElementById("bg").style.borderRadius = "2em";
+    document.querySelector(".bounding-box.outline").style.display ="flex";
 }
 
 function downloadImage(data, filename = 'untitled.png') {
@@ -97,7 +99,8 @@ function loadRandom(){
 
       if(x=="hair"){
         str = eval(x + "Array");
-        i = str[Math.floor(Math.random()*str.length)];
+        order = Math.floor(Math.random()*str.length);
+        i = str[order];
         c = i;
         haircolorname = hairColorArr[Math.floor(Math.random()*hairColorArr.length)];
         document.querySelector(".swatch."+haircolorname).classList.add("active");
@@ -108,8 +111,9 @@ function loadRandom(){
         });
         url = "url('/pfpmaker/traits/"+x+"/"+haircolorname+"/type_"+i+".png')";
         document.querySelector(".bounding-box."+x).style.backgroundImage=url;
-        document.querySelector(".bounding-box."+x).setAttribute("value", i);
-        document.querySelector(".type."+x).innerHTML = i;
+        document.querySelector(".type."+x).setAttribute("value",order);
+        document.querySelector(".type."+x).innerHTML = "type "+i;
+        console.log(x+" loaded: "+url);
       }else if(x=="skin"){
         str = eval(x + "Array");
         i = str[Math.floor(Math.random()*str.length)];
@@ -125,18 +129,18 @@ function loadRandom(){
         document.querySelector(".bounding-box."+x).style.backgroundImage=url;
         document.querySelector(".bounding-box."+x).setAttribute("value", i);
         document.querySelector(".type."+x).innerHTML = i;
-      }else if(x=="eyes")
+      }else if(x=="eyes" || x=="nose")
       {
         str = eval(x + "Array");
         order = Math.floor(Math.random()*str.length);
         i = str[order];
         c = i;
         url = "url('/pfpmaker/traits/"+x+"/"+order+"_"+i+".png')";
-        console.log("eyes loaded: "+url);
+        console.log(x+" loaded: "+url);
         document.querySelector(".bounding-box."+x).style.backgroundImage=url;
         // document.querySelector(".bounding-box."+x).setAttribute("value", i);
         
-        document.querySelector(".type."+x).innerHTML = i;
+        document.querySelector(".type."+x).innerHTML = order+" - "+i;
         document.querySelector(".type."+x).setAttribute("value",order);
         console.log("loaded "+url);
       }
@@ -161,13 +165,13 @@ function loadRandom(){
               // type.setAttribute("value",c);
               shirt.setAttribute("value",c);
               i=shirtArray.length-1;
-              shirt.innerHTML=shirtArray[i];
+              shirt.innerHTML=i+" - "+shirtArray[i];
               console.log("shirt "+i);
               
           }else{
               i--;
               shirt.setAttribute("value",i);
-              shirt.innerHTML=shirtArray[i];
+              shirt.innerHTML=i+" - "+shirtArray[i];
               console.log(i);
               
           }
@@ -183,18 +187,19 @@ function loadRandom(){
           console.log("loaded shirt: "+shirtArray[i]);
       }else{
         str = eval(x + "Array");
-        i = str[Math.floor(Math.random()*str.length)];
-          if(x=="jacket" && i>0){
+        order = Math.floor(Math.random()*str.length);
+        i = str[order];
+        c = i;
+        if(x=="jacket" && i!="none"){
             document.querySelector(".extrabtn.removeOuter").style.display="flex";
           }else{
             document.querySelector(".extrabtn.removeOuter").style.display="none";
           }
-        c = i;
-        url = "url('/pfpmaker/traits/"+x+"/type_"+i+".png')";
+        url = "url('/pfpmaker/traits/"+x+"/"+order+"_"+i+".png')";
+        console.log(x+" loaded: "+url);
         document.querySelector(".bounding-box."+x).style.backgroundImage=url;
-        // document.querySelector(".bounding-box."+x).setAttribute("value", i);
-        
-        document.querySelector(".type."+x).innerHTML = i;
+        document.querySelector(".type."+x).innerHTML = order+" - "+i;
+        document.querySelector(".type."+x).setAttribute("value",order);
         console.log("loaded "+url);
       }
       
@@ -207,20 +212,19 @@ function prev(a){
   attrib = a.getAttribute("name");
   if(attrib=="hair"){
           type = document.querySelector(".type.hair");
-          //i = type.getAttribute("value");
-          i = type.innerHTML;
+          i = type.getAttribute("value");
           if(i==0){
-              //type.setAttribute("value",skinArray.length-1);
-              type.innerHTML = hairArray.length-1;
-              i=str.length-1;
-              console.log(i);
-          }else{
-              i--;
-              //type.setAttribute("value",i);
-              type.innerHTML = i;
-              console.log(i);
-          }
-          url="url('/pfpmaker/traits/hair/"+haircolorname+"/type_"+i+".png')";
+            i=hairArray.length-1;
+            type.setAttribute("value",i);
+            type.innerHTML = "type "+i;
+            console.log(i);
+        }else{
+            i--;
+            type.setAttribute("value",i);
+            type.innerHTML = "type "+i;
+            console.log(i);
+        }
+          url="url('/pfpmaker/traits/"+attrib+"/"+haircolorname+"/type_"+i+".png')";
           console.log(url);
           document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
   }else if(attrib=="eyes")
@@ -231,12 +235,12 @@ function prev(a){
           if(i==0){
               i=eyesArray.length-1;
               type.setAttribute("value",i);
-              type.innerHTML = eyesArray[i];
+              type.innerHTML = i+" - "+eyesArray[i];
               console.log(i);
           }else{
               i--;
               type.setAttribute("value",i);
-              type.innerHTML = eyesArray[i];
+              type.innerHTML = i+" - "+eyesArray[i];
               console.log(i);
           }
           url="url('/pfpmaker/traits/"+attrib+"/"+i+"_"+eyesArray[i]+".png')";
@@ -244,28 +248,33 @@ function prev(a){
           document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
   }else if(attrib=="bust"){
           type = document.querySelector(".type.bust");
-          //i = type.getAttribute("value");
-          i = type.innerHTML;
+          i = type.getAttribute("value");
           if(i==0){
-              //type.setAttribute("value",skinArray.length-1);
-              type.innerHTML = bustArray.length-1;
-              i=bustArray.length-1;
-              console.log(i);
+            i=bustArray.length-1;
+            type.setAttribute("value",i);
+            type.innerHTML = bustArray[i];
+            console.log(i);
           }else{
-              i--;
-              //type.setAttribute("value",i);
-              type.innerHTML = i;
-              console.log(i);
+            i--;
+            type.setAttribute("value",i);
+            type.innerHTML = bustArray[i];
+            console.log(i);
           }
-          busttype = i;
-          shirt = document.querySelector(".type.top").innerHTML;
-          url="url('/pfpmaker/traits/top/"+busttype+"/type_"+shirt+".png')";
+          if(busttype==0){
+            shirtArray=neutShirtArr;
+          }else{
+              shirtArray=femShirtArr;
+          }
+          busttype = bustArray[i];
+          shirt = document.querySelector(".type.top").getAttribute("value");
+          c=document.querySelector(".type.top").getAttribute("value");
+          url="url('/pfpmaker/traits/top/"+busttype+"/"+c+"_"+shirtArray[c]+".png')";
           console.log(url);
           document.querySelector(".bounding-box.top").style.backgroundImage=url;
     }
     else if(attrib=="top"){
           type = document.querySelector(".type.top");
-          i = type.innerHTML;
+          i = type.getAttribute("value");
           shirtArray= [];
           if(busttype==0){
               shirtArray=neutShirtArr;
@@ -273,18 +282,18 @@ function prev(a){
               shirtArray=femShirtArr;
           }
           if(i==0){
-              //type.setAttribute("value",skinArray.length-1);
-              type.innerHTML = shirtArray.length-1;
-              i=shirtArray.length-1;
-              console.log(i);
+            i=shirtArray.length-1;
+            type.setAttribute("value",i);
+            type.innerHTML = i+" - "+shirtArray[i];
+            console.log(i);
           }else{
-              i--;
-              //type.setAttribute("value",i);
-              type.innerHTML = i;
-              console.log(i);
+            i--;
+            type.setAttribute("value",i);
+            type.innerHTML = i+" - "+shirtArray[i];
+            console.log(i);
           }
           shirt = document.querySelector(".type.top").innerHTML;
-          url="url('/pfpmaker/traits/top/"+busttype+"/type_"+shirt+".png')";
+          url="url('/pfpmaker/traits/"+attrib+"/"+busttype+"/"+i+"_"+shirtArray[i]+".png')";
           checkExtraBtn(i,"removeShirt");
           console.log(url);
           document.querySelector(".bounding-box.top").style.backgroundImage=url;
@@ -292,23 +301,23 @@ function prev(a){
     else{
           str = eval(attrib + "Array");
           type = document.querySelector(".type."+attrib);
-          //i = type.getAttribute("value");
-          i = type.innerHTML;
+          i = type.getAttribute("value");
+          // i = type.innerHTML;
           if(i==0){
-              //type.setAttribute("value",skinArray.length-1);
-              type.innerHTML = str.length-1;
               i=str.length-1;
+              type.setAttribute("value",i);
+              type.innerHTML = i+" - "+str[i];
               console.log(i);
           }else{
               i--;
-              //type.setAttribute("value",i);
-              type.innerHTML = i;
+              type.setAttribute("value",i);
+              type.innerHTML = i+" - "+str[i];
               console.log(i);
           }
           if(attrib=="jacket"){
             checkExtraBtn(i,"removeOuter");
           }
-          url="url('/pfpmaker/traits/"+attrib+"/type_"+i+".png')";
+          url="url('/pfpmaker/traits/"+attrib+"/"+i+"_"+str[i]+".png')";
           console.log(url);
           document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
   }
@@ -317,20 +326,23 @@ function prev(a){
 function next(a){
   attrib = a.getAttribute("name");
   if(attrib=="hair"){
-        type = document.querySelector(".type.hair");
-        i = type.innerHTML;
-        if(i==hairArray.length-1){
-            type.innerHTML = 0;
-            i=0;
-            console.log(i);
-        }else{
-            i++;
-            type.innerHTML = i;
-            console.log(i);
-        }
-        url="url('/pfpmaker/traits/hair/"+haircolorname+"/type_"+i+".png')";
-        console.log(url);
-        document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
+    str = eval(attrib + "Array");
+    type = document.querySelector(".type."+attrib);
+    i = type.getAttribute("value");
+    if(i==str.length-1){
+      i=0;
+      type.setAttribute("value",i);
+      type.innerHTML = "type "+str[i];
+      console.log(i);
+    }else{
+      i++;
+      type.setAttribute("value",i);
+      type.innerHTML = "type "+str[i];
+      console.log(i);
+    }
+      url="url('/pfpmaker/traits/"+attrib+"/"+haircolorname+"/type_"+i+".png')";
+      console.log(url);
+      document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
   }else if(attrib=="eyes")
   {
     str = eval(attrib + "Array");
@@ -338,14 +350,14 @@ function next(a){
     i = type.getAttribute("value");
     // i = type.innerHTML;
     if(i==str.length-1){
-        type.setAttribute("value",0);
         i=0;
-        type.innerHTML = str[i];
+        type.setAttribute("value",0);
+        type.innerHTML = i+" - "+str[i];
         console.log(i);
     }else{
         i++;
         type.setAttribute("value",i);
-        type.innerHTML = str[i];
+        type.innerHTML = i+" - "+str[i];
         console.log(i);
     }
     url="url('/pfpmaker/traits/"+attrib+"/"+i+"_"+str[i]+".png')";
@@ -353,67 +365,79 @@ function next(a){
     document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
   }
   else if(attrib=="bust"){
-        type = document.querySelector(".type.bust");
-        i = type.innerHTML;
-        if(i==bustArray.length-1){
-            i=0;
-            type.innerHTML = 0;
-            console.log("bust" + i);
-        }else{
-            i++;
-            type.innerHTML = i;
-            console.log("bust" + i);
-        }
-        busttype = i;
-        shirt = document.querySelector(".type.top").innerHTML;
-        url="url('/pfpmaker/traits/top/"+busttype+"/type_"+shirt+".png')";
-        document.querySelector(".bounding-box.top").style.backgroundImage=url;
+    str = eval(attrib + "Array");
+    type = document.querySelector(".type."+attrib);
+    i = type.getAttribute("value");
+    if(i==str.length-1){
+      i=0;
+      type.setAttribute("value",i);
+      type.innerHTML = str[i];
+      console.log(i);
+    }else{
+      i++;
+      type.setAttribute("value",i);
+      type.innerHTML = str[i];
+      console.log(i);
+    }
+    if(busttype==0){
+      shirtArray=neutShirtArr;
+    }else{
+        shirtArray=femShirtArr;
+    }
+    busttype = bustArray[i];
+    shirt = document.querySelector(".type.top").getAttribute("value");
+    c=document.querySelector(".type.top").getAttribute("value");
+    url="url('/pfpmaker/traits/top/"+busttype+"/"+c+"_"+shirtArray[c]+".png')";
+    console.log(url);
+    document.querySelector(".bounding-box.top").style.backgroundImage=url;
   }
   else if(attrib=="top"){
-          type = document.querySelector(".type.top");
-          i = type.innerHTML;
-          shirtArray= [];
-          if(busttype==0){
-              shirtArray=neutShirtArr;
-          }else{
-              shirtArray=femShirtArr;
-          }
-          if(i==shirtArray.length-1){
-              i=0;
-              type.innerHTML = 0;
-              console.log(i);
-          }else{
-              i++;
-              type.innerHTML = i;
-              console.log(i);
-          }
-          shirt = document.querySelector(".type.top").getAttribute("value");
-          url="url('/pfpmaker/traits/top/"+busttype+"/type_"+shirt+".png')";
-          checkExtraBtn(i,"removeShirt");
-          console.log(url);
-          document.querySelector(".bounding-box.top").style.backgroundImage=url;
+    type = document.querySelector(".type.top");
+    i = type.getAttribute("value");
+    shirtArray= [];
+    if(busttype==0){
+        shirtArray=neutShirtArr;
     }else{
-        str = eval(attrib + "Array");
-        type = document.querySelector(".type."+attrib);
-        //i = type.getAttribute("value");
-        i = type.innerHTML;
-        if(i==str.length-1){
-            i=0;
-            //type.setAttribute("value",0);
-            type.innerHTML = 0;
-            console.log(i);
-        }else{
-            i++;
-            //type.setAttribute("value",i);
-            type.innerHTML = i;
-            console.log(i);
-        }
-        if(attrib=="jacket"){
-          checkExtraBtn(i,"removeOuter");
-        }
-        url="url('/pfpmaker/traits/"+attrib+"/type_"+i+".png')";
-        console.log(url);
-        document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
+        shirtArray=femShirtArr;
+    }
+    if(i==shirtArray.length-1){
+      i=0;
+      type.setAttribute("value",i);
+      type.innerHTML = i+" - "+shirtArray[i];
+      console.log(i);
+    }else{
+      i++;
+      type.setAttribute("value",i);
+      type.innerHTML = i+" - "+shirtArray[i];
+      console.log(i);
+    }
+    shirt = document.querySelector(".type.top").innerHTML;
+    url="url('/pfpmaker/traits/"+attrib+"/"+busttype+"/"+i+"_"+shirtArray[i]+".png')";
+    checkExtraBtn(i,"removeShirt");
+    console.log(url);
+    document.querySelector(".bounding-box.top").style.backgroundImage=url;
+  }else{
+    str = eval(attrib + "Array");
+    type = document.querySelector(".type."+attrib);
+    i = type.getAttribute("value");
+    // i = type.innerHTML;
+    if(i==str.length-1){
+        i=0;
+        type.setAttribute("value",i);
+        type.innerHTML = i+" - "+str[i];
+        console.log(i);
+    }else{
+        i++;
+        type.setAttribute("value",i);
+        type.innerHTML = i+" - "+str[i];
+        console.log(i);
+    }
+    if(attrib=="jacket"){
+      checkExtraBtn(i,"removeOuter");
+    }
+    url="url('/pfpmaker/traits/"+attrib+"/"+i+"_"+str[i]+".png')";
+    console.log(url);
+    document.querySelector(".bounding-box."+attrib).style.backgroundImage=url;
   }
   
 }
@@ -429,7 +453,7 @@ function setHairColor(a){
         });
 
         url="url('/pfpmaker/traits/hair/"+haircolorname+"/type_"+getHairType()+".png')";
-        console.log(url);
+        console.log("hair loaded:" + url);
         document.querySelector(".bounding-box.hair").style.backgroundImage=url;  
 }
 function setSkinColor(a){
@@ -448,19 +472,21 @@ function setSkinColor(a){
         document.querySelector(".bounding-box.skin").style.backgroundImage=url;
 }
 function getHairType(){
-  return document.querySelector(".type.hair").innerHTML;
+  return document.querySelector(".type.hair").getAttribute("value");
 }
 function getSkinType(){
-  return document.querySelector(".type.skin").innerHTML;
+  return document.querySelector(".type.skin").getAttribute("value");
 }
 function removeShirt(){
-  document.querySelector(".type.top").innerHTML=0;
+  document.querySelector(".type.top").innerHTML="0 - none";
+  document.querySelector(".type.top").setAttribute("value",0);
   url="url('/pfpmaker/traits/top/"+busttype+"/type_0.png')";
   document.querySelector(".bounding-box.top").style.backgroundImage=url;
   checkExtraBtn(0,"removeShirt");
 }
 function removeOuter(){
-  document.querySelector(".type.jacket").innerHTML=0;
+  document.querySelector(".type.jacket").innerHTML="0 - none";
+  document.querySelector(".type.jacket").setAttribute("value",0);
   url="url('/pfpmaker/traits/jacket/type_0.png')";
   document.querySelector(".bounding-box.jacket").style.backgroundImage=url;
   checkExtraBtn(0,"removeOuter");

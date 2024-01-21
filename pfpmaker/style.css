@@ -1,5 +1,20 @@
+@font-face {
+    font-family: 'Gravity Falls';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/172299/gravitation_falls.otf');
+  }
+body{
+    /* background-image: url(/pfpmaker/gravity\ falls\ logo.png); */
+    background-position-x: right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-attachment: fixed;
+}
 .section-body{
     margin-top:25px;
+}
+.gravityfalls{
+    font-family: Gravity Falls;
 }
 .pfp-box{
     height:500px;
@@ -195,6 +210,15 @@
 .jacket{
     background-image: url(...);
 }
+.outline{
+    background-image: url(/pfpmaker/traits/outline.png);
+}
+/* .outline.b1{
+    background-image: url(/pfpmaker/traits/outline.png);
+}
+.outline.b2{
+    background-image: url(/pfpmaker/traits/outline2.png);
+} */
 
 .content-body img{
     width: 60px;
@@ -213,6 +237,15 @@
     color: black;
     font-size: 18px;
     text-decoration: none;
+}
+.bounding-box.outline{
+    /* filter: invert(.5); */
+    /* opacity: .5; */
+}
+.bounding-box.outline.b2{
+    /* filter: invert(.5); */
+    /* opacity: .5; */
+    mix-blend-mode: screen;
 }
 .content-body:hover{
     border-color:#09d0d0;
