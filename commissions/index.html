@@ -85,7 +85,7 @@
                             <h3 class="d-flex">Emotes</h3>
                             <p><b>SET DISCOUNT!</b><br>$22.5/emote for 5+ emote set<br>
                                 $20/emote for 20+ emote set<br><br>$25 per emote</p>
-                            <div class="btn" onclick="popup(this)" title="" alt="" img="../img/emote set 1.png" >View More</div>
+                            <div class="btn"  data-toggle="modal" data-target=".emotes" title="" alt="" >View More</div>
                             </div></div>
                         <div class="col-sm-12">
                         <div class="card content-body" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
@@ -114,7 +114,7 @@
                             <h3 class="d-flex">PFP/Avatar</h3>
                             <p>headshot, bust up, half or full body with plain background. Extra cost for additional character and a custom background.<br><br>
                             $50 - $150</p>
-                            <div class="btn" onclick="popup(this)" title="" alt="" img="../img/avatar-samples.png" >View More</div>
+                            <div class="btn"  data-toggle="modal" data-target=".pfp" title="" alt="" >View More</div>
                         </div></div>
 
                         <div class="col-sm-12">
@@ -123,7 +123,7 @@
                             <h3 class="d-flex">Axie Trainer Cards</h3>
                             <p>Trainer card with a chosen companion axie. Choose from a set of pre-drawn background in Lunacia.<br><br>
                             $100</p>
-                            <div class="btn" onclick="popup(this)" title="" alt="" img="../img/trainer cards.png" >View More</div>
+                            <div class="btn"  data-toggle="modal" data-target=".trainer" title="" alt="" >View More</div>
                         </div></div>
                     
                 
@@ -136,7 +136,7 @@
                             <h3 class="d-flex">Illustrations</h3>
                             <p>Twitch/Youtube headers, banners, screens, desktop wallpapers, postcards, etc.<br><br>
                             $100 - $400</p>
-                            <div class="btn" onclick="popup(this)" title="" alt="" img="../img/illust template 2.png" >View More</div>
+                            <div class="btn"  data-toggle="modal" data-target=".illust" title="" alt="" >View More</div>
                         </div></div>
 
                         
@@ -193,6 +193,8 @@
             }
             .modal-content {
                 background-color: transparent;
+                padding:20px;
+                /* border-radius:2em; */
             }
             .img-wrap{
                 padding-top:20px;
@@ -248,14 +250,174 @@
                 padding:2px;
                 padding-top:10px;
             }
+            .modal-dialog{
+                max-width:100%;
+            }
+            .modal{
+                background-color: rgba(0,0,0,.8);
+            }
+            .modal-content img{
+                border-radius:1em;
+                margin-bottom:30px;
+            }
+            .modal-content .btn i{
+                font-size: 150%;
+            }
+            .modal-content .btn{
+                padding:10px 20px;
+                /* background-color: #1a1a1a; */
+                color:white;
+                border-radius: 2em;
+                margin-right:-20px;
+                font-size: 100%;
+                color:white;
+            }
+            .emotes .col-lg-6{
+            }
         </style>
         <div onclick="topFunction()" id="myBtn" title="Go to top" style="display:none;"><div class="d-flex flex-column justify-content-center text-center"><i class="fas fa-angle-up fa-lg"></i></div></div>
          <!-- MODALS -->
 
-            <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+         <div class="modal fade emotes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content container">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <div class="btn d-flex align-items-center" class="close" data-dismiss="modal" aria-label="Close" ><i class="fas fa-times"></i>&nbsp; close</div>
+                        </div>
+                    <div class="row">
+                        
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="../img/emote set 1.png" class="img-fluid" oncontextmenu="return false;">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="../img/emote set 2.png" class="img-fluid" oncontextmenu="return false;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+            <div class="modal fade pfp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <img id="popup-img" src="" class="img-fluid" oncontextmenu="return false;">
+                    <div class="modal-content container">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="btn d-flex align-items-center" class="close" data-dismiss="modal" aria-label="Close" ><i class="fas fa-times"></i>&nbsp; close</div>
+                            </div>
+                        <div class="row">
+                            
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/nft sample 17.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/EnjoyClorox avatar.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/honorable azuki jay.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/SillyEmy-comm.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/@dash144_ commission 6 portrait.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/legion.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade illust" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content container">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="btn d-flex align-items-center" class="close" data-dismiss="modal" aria-label="Close" ><i class="fas fa-times"></i>&nbsp; close</div>
+                            </div>
+                        <div class="row">
+                            
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/Squirrel Deck preview.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/axie gank banner.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/Foxes Postcard.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/Cat Deck.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/unstatesloth class.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/Caleb Hyles cover v2.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade trainer" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content container">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="btn d-flex align-items-center" class="close" data-dismiss="modal" aria-label="Close" ><i class="fas fa-times"></i>&nbsp; close</div>
+                            </div>
+                        <div class="row">
+                            
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/trainer cards 3.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="../img/trainer cards 2.png" class="img-fluid" oncontextmenu="return false;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
                     </div>
                 </div>
             </div>
