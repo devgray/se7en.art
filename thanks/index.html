@@ -85,11 +85,17 @@
                 
             }
             .content-body{
-                border:solid #c0c0c0 1px;
+                /* border:solid #c0c0c0 1px; */
+                background-color: rgba(0,0,0,.025);
                 margin-bottom: 30px;
+                border-radius:1em;
             }
+            .content-body:hover{
+                background-color: rgba(0,0,0,.05);
+            }
+            
             .content-body p{
-                margin:20px;
+                padding:20px;
             }
             .section-body a{
                 color: black;
@@ -98,6 +104,12 @@
             }
             .content-body:hover{
                 border-color:#09d0d0;
+            }
+            .content-body.gold{
+                background-color: rgba(255,215,0,.1);
+            }
+            .content-body.gold:hover{
+                background-color: rgba(255,215,0,.3);
             }
             .sub-header{
                 opacity: 1;
@@ -114,7 +126,7 @@
 
             <div class="row section-body">
                 
-                <div class="col-sm-12"><div class="content-body">
+                <div class="col-sm-12"><div class="content-body" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
                     <p>
                         Forever grateful to these people who have supported me big time throughout my artventures (from DeviantArt, Twitch, to Web3.) Some I met years ago and became a friend;
                         some have always trusted me and my works, and some still does; 
@@ -125,7 +137,7 @@
                 </div></div>
 
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <div class="content-body" style="border-color:gold;">
+                    <div class="content-body gold">
                         <h3><img class="img-fluid" src="../img/avi/jerikuto.jpg">Jerikuto<span class='sub-header'>
                         </span></h3>
                     </div>
@@ -145,8 +157,8 @@
                     </div></a>
                 </div>
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <a href="https://www.twitch.tv/fuxelbau" target="_blank"><div class="content-body">
-                        <h3><img class="img-fluid" src="../img/avi/fuxel.jpg">Fuxel<span class='sub-header'>
+                    <a href="https://www.twitch.tv/darkviperau" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/dark.png">DarkViperAU<span class='sub-header'>
                             <i class="fab fa-twitch"></i>
                         </span></h3>
                     </div></a>
@@ -166,17 +178,18 @@
                     </div></a>
                 </div>
                 
-                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
-                    <a href="https://www.twitch.tv/darkviperau" target="_blank"><div class="content-body">
-                        <h3><img class="img-fluid" src="../img/avi/dark.png">DarkViperAU<span class='sub-header'>
-                            <i class="fab fa-twitch"></i>
-                        </span></h3>
-                    </div></a>
-                </div>
+                
                 
                 <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
                     <a href="https://www.twitch.tv/locomocha" target="_blank"><div class="content-body">
                         <h3><img class="img-fluid" src="../img/avi/locomocha.png">Locomocha<span class='sub-header'>
+                            <i class="fab fa-twitch"></i>
+                        </span></h3>
+                    </div></a>
+                </div>
+                <div class="col-sm-12 col-lg-4" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
+                    <a href="https://www.twitch.tv/fuxelbau" target="_blank"><div class="content-body">
+                        <h3><img class="img-fluid" src="../img/avi/fuxel.jpg">Fuxel<span class='sub-header'>
                             <i class="fab fa-twitch"></i>
                         </span></h3>
                     </div></a>
