@@ -49,7 +49,7 @@
 
     </head>
 
-    <body onload="loadRandom()">
+    <body onload="preload()">
         <div class="container-fluid">
             <div class="row" id="header">
                 <div class="col-sm-12 text-center flex-column section-header">
@@ -99,7 +99,9 @@
                             <div class="bounding-box eyes"></div>
                             <div class="bounding-box mouth"></div>
                             <div class="bounding-box nose"></div>
+                            <div class="bounding-box headwear"></div>
                             <div class="bounding-box hair"></div>
+                            
                             <div class="bounding-box top"></div>
                             <div class="bounding-box jacket"></div>
                             <div class="bounding-box outline"></div>
@@ -137,13 +139,16 @@
                             <div class="op"><h6>FACIAL HAIR</h6><div class="opBtn left" name="hair"><i class="fas fa-angle-left fa-lg"></i></div><div class="type"></div><div class="opBtn right" name="hair"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             
                             <div class="op"><h6>HAIR</h6><div class="opBtn left" name="hair" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type hair"></div><div class="opBtn right" name="hair" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            
+
                         </div>
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                             <div class="op"><h6>HAIR COLOR</h6><div class="colorsets d-flex">
+                                <div class="swatch haircolor white" name="white" value="1" onclick="setHairColor(this)"></div>
                                 <div class="swatch haircolor blonde" name="blonde" value="1" onclick="setHairColor(this)"></div>
-                                <div class="swatch haircolor grey" name="grey" value="2" onclick="setHairColor(this)"></div>
                                 <div class="swatch haircolor orange" name="orange" value="3" onclick="setHairColor(this)"></div>
                                 <div class="swatch haircolor brown" name="brown" value="0" onclick="setHairColor(this)"></div>
+                                <div class="swatch haircolor darkbrown" name="darkbrown" value="2" onclick="setHairColor(this)"></div>
                             </div></div>
                             <!-- <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6><div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div>SHIRT</h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
@@ -160,6 +165,7 @@
                             <div class="op"><h6 class="d-flex">OUTERWEAR<div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket" value=""></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                         </div>
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
+                            <div class="op"><h6 class="d-flex">HEADWEAR<div class="extrabtn removeHeadwear align-items-center justify-content-center" onclick=removeHeadwear();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="headwear" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type headwear" value=""></div><div class="opBtn right" name="headwear" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6>Accessory</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6>HELD ITEM</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type" >coming soon</div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
                             <div class="op"><h6>PET</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type" >coming soon</div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>

@@ -113,11 +113,18 @@ body{
     border: 3px solid white;
     outline: 5px solid #c0c0c0;
 }
+.swatch.white{
+    background-color: #fdf8f5;
+    border: solid 1px #c0c0c0;
+}
+.swatch.darkbrown{
+    background-color: #4a382e;
+}
 .swatch.brown{
-    background-color: #452d25;
+    background-color: #7e462d;
 }
 .swatch.blonde{
-    background-color: #f9ed9d;
+    background-color: #e2c172;
 }
 .swatch.grey{
     background-color: #736d6b;
@@ -139,7 +146,7 @@ body{
     background-color: #efb698;
 }
 .swatch.dark{
-    background-color: #614046;
+    background-color: #6e544d;
 }
 .pfpbtn:hover{
     background-color: rgba(0,0,0,.1);
