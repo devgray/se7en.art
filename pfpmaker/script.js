@@ -99,6 +99,7 @@ function saveImageAs (imgOrURL) {
   }
 function preload(){
   console.log("images preloading ...");
+  // preloading hair
   headwearArray.forEach(a => {
       loc = "/pfpmaker/traits/hair/"+a+"/";
         hairArray.forEach(x => {
@@ -110,7 +111,32 @@ function preload(){
       });
     });
   });
-  
+  // preloading headwear
+  preloadHeadwear =["none","cap","cap","cap","lumberjack","lumberjack","lumberjack","beanie","beanie","beanie"];
+  i=0;
+  preloadHeadwear.forEach(a => {
+    loc = "/pfpmaker/traits/hair/headwear/"+i+"_"+a+".png";
+    img = new Image();
+    img.src = loc;
+    console.log(img);
+    i++;
+  });
+  // preloading bg,eyes,jacket,mouth,nose
+  toPreload = ["bg","eyes","jacket","mouth","nose"];
+  toPreload.forEach(a => {
+    loc = "/pfpmaker/traits/"+a+"/";
+    str = eval(a+ "Array");
+    i=0;
+    str.forEach(x => {
+      url=loc+i+"_"+x+".png";
+      img = new Image();
+      img.src = url;
+      console.log(img);
+      i++;
+    });
+  });
+
+
   console.log("all images loaded. loadRandom() starting...")
   loadRandom();
 }
