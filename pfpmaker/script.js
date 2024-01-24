@@ -7,7 +7,7 @@ var noseArray = ["button","pointy","wide"];
 var mouthArray = ["happy","laugh","blank","wut","whuuuuut","cheeky mad"];
 var hairArray = [0,1,2,3];
 var hairColorArr = ["brown","blonde","darkbrown","orange","white"];
-var skinColorArr = ["pale","light","tan","dark","pale","light","tan","pale","light","tan"];
+var skinColorArr = ["pale","light","tan","dark"];
 var bustArray = ["type a","type b"];
 var femShirtArr = ["none","plain white","valorant black"];
 var neutShirtArr = ["none","plain white","valorant black"];
@@ -135,9 +135,30 @@ function preload(){
       i++;
     });
   });
-
-
+  // preloading skin color
+  skinColorArr.forEach(a => {
+    loc = "/pfpmaker/traits/skin/"+a+".png";
+    img = new Image();
+    img.src = loc;
+    console.log(img);
+  });
+  // preloading shirts
+  ii = 0;
+  femShirtArr.forEach(a => {
+    loc1 = "/pfpmaker/traits/top/type a/"+ii+"_"+a+".png";
+    loc2 = "/pfpmaker/traits/top/type b/"+ii+"_"+a+".png";
+    img1 = new Image();
+    img1.src = loc1;
+    console.log(img1);
+    img2 = new Image();
+    img2.src = loc2;
+    console.log(img2);
+    ii++;
+  });
+  
   console.log("all images loaded. loadRandom() starting...")
+  document.querySelector(".pfp-box").style.display="flex";
+  document.querySelector(".loader-box").style.display="none";
   loadRandom();
 }
 function loadRandom(){
@@ -190,10 +211,10 @@ function loadRandom(){
         document.querySelector(".type."+x).innerHTML = "type "+i;
         console.log(x+" loaded: "+url);
       }else if(x=="skin"){
-        str = eval(x + "Array");
+        str = ["pale","light","tan","dark","pale","light","tan","pale","light","tan"];
         i = str[Math.floor(Math.random()*str.length)];
         c = i;
-        skincolorname = skinColorArr[Math.floor(Math.random()*skinColorArr.length)];
+        skincolorname = str[Math.floor(Math.random()*str.length)];
         document.querySelector(".swatch."+skincolorname).classList.add("active");
         swatch = document.querySelectorAll(".swatch.skincolor:not(."+skincolorname+")");
         console.log(swatch);

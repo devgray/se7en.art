@@ -16,11 +16,17 @@ body{
 .gravityfalls{
     font-family: Gravity Falls;
 }
+.loader-box{
+    display: flex;
+    height:500px;
+    width:500px;
+    z-index: 10;
+}
 .pfp-box{
     height:500px;
     width:500px;
     z-index: 10;
-    
+    display:none;
 }
 .bounding-box{
     border-radius:2em;
