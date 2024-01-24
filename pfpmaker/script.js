@@ -157,9 +157,10 @@ function preload(){
   });
   
   console.log("all images loaded. loadRandom() starting...")
+  loadRandom();
   document.querySelector(".pfp-box").style.display="flex";
   document.querySelector(".loader-box").style.display="none";
-  loadRandom();
+  
 }
 function loadRandom(){
   console.log("loadRandom() started.");
