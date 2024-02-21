@@ -11,7 +11,7 @@ var skinColorArr = ["pale","light","tan","dark"];
 var bustArray = ["type a","type b"];
 var femShirtArr = ["none","plain white","valorant black","plain red"];
 var neutShirtArr = ["none","plain white","valorant black","plain red"];
-var jacketArray = ["none","sleeveless","sleeveless","sleeveless","sweater","sweater","sweater","sweater"];
+var jacketArray = ["none","sleeveless","sleeveless","sleeveless","sweater","sweater","sweater","sweater","hoodie","hoodie","hoodie","overalls","overalls","overalls"];
 var haircolorname;
 var skincolorname;
 var busttype;
