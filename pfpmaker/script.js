@@ -23,6 +23,11 @@ var headwearnameArr=[1,2,3,4,5,6,7,8,9];
 var capArray = [0,1,2];
 
 function download(){
+    const audio = document.querySelector("audio");
+    audio.volume = 0.1;
+    audio.loop = true;
+    audio.play();
+
     console.log("starting download...");
     pfp = document.querySelector("#pfp");
     document.querySelector(".bounding-box.outline").style.display ="none";
@@ -34,7 +39,7 @@ function download(){
         var img = new Image(), 
             can=document.createElement('canvas');
             
-        can=canvas;
+        // can=canvas;
 
         // img.style.webkitTransformOrigin= "left bottom";
         // img.id = "printable";
@@ -50,7 +55,8 @@ function download(){
         myWindow.document.open();
         // download page ad unit
         myWindow.document.write(
-          '<div class="ads-side" style="position:fixed;right:0;width:380px;height:800px;background-color:rgba(0,0,0,.05);">'
+          '<div class=""><img src="/pfpmaker/josh.gif" style="width:100%;></div>'
+          + '<div class="ads-side" style="position:fixed;right:0;width:380px;height:800px;background-color:rgba(0,0,0,.05);">'
           +  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6805605795676003" crossorigin="anonymous"></script>'
           +  '<ins class="adsbygoogle"'
           +  'style="display:block"'
