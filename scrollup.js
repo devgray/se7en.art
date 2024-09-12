@@ -1,7 +1,10 @@
 // Get the button
 
 // When the user scrolls down 20px from the top of the document, show the button
-
+var spinner = new Image();
+spinner.src = 'img/loading.gif';
+// console.log('url("' + spinner.src + '")');
+// $('.img-wrap').css('background-image','url("' + spinner.src + '")');
 
 window.onscroll = function() {scrollFunction()};
 
