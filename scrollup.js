@@ -45,8 +45,11 @@ function popup(a){
   $('.modal').modal('show');
 }
 function fadeIn(a){
+  
   op = 0.1;
   img = a.parentNode;
+  
+  a.setAttribute('src', a.getAttribute('data-original-img'));
   img.style.opacity = 1;
       // timer = setInterval(function () {
       //   if (op >= 1){
@@ -55,6 +58,7 @@ function fadeIn(a){
       //   img.style.opacity = op;
         
       // }, 10);
+      
 }
 // $(document).ready(function() {
 //   $(".img-test").each(function() {
