@@ -47,10 +47,9 @@ function popup(a){
 function fadeIn(a){
   
   op = 0.1;
-  img = a.parentNode;
-  img.style.opacity = 0;
+  // img = a.parentNode;
   a.setAttribute('src', a.getAttribute('data-original-img'));
-  img.style.opacity=1;
+  a.style.opacity=1;
   
   
   
