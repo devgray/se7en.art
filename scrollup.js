@@ -1,17 +1,11 @@
 // Get the button
 
 // When the user scrolls down 20px from the top of the document, show the button
-var spinner = new Image();
-spinner.src = 'img/loading.gif';
-// console.log('url("' + spinner.src + '")');
-// $('.img-wrap').css('background-image','url("' + spinner.src + '")');
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("myBtn").style.display = "block";
-    window.alert(mybutton);
   } else {
     document.getElementById("myBtn").style.display = "none";
   }
