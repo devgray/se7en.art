@@ -117,7 +117,10 @@
                 }
                 .image-thumbnails .img-wrap{
                         opacity: 1;
-                        -webkit-transition: opacity .5s ease-in-out;
+                        /* -webkit-transition: opacity .5s ease-in-out; */
+                        background-image: url("img/loading.gif");
+                        background-repeat: no-repeat;
+                        background-position: center;
                     }
                 .image-thumbnails .img-wrap{
                     padding:5px;
@@ -132,9 +135,7 @@
                     font-family: ProductSansBold;
                 }
                 .img-wrap{
-                background-image: url("img/loading.gif");
-                background-repeat: no-repeat;
-                background-position: center;
+                
                 }
             </style>
             <div class="img-loader text-center mt-5" hidden>
