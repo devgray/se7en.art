@@ -48,9 +48,11 @@ function fadeIn(a){
   
   op = 0.1;
   img = a.parentNode;
+  img.style.opacity = 0;
   a.setAttribute('src', a.getAttribute('data-original-img'));
-  a.style.opacity=1;
-  img.style.opacity = 1;
+  img.style.opacity=1;
+  
+  
   
       // timer = setInterval(function () {
       //   if (op >= 1){
