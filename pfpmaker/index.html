@@ -39,25 +39,7 @@
         $(function() {
             AOS.init();
         });
-            window.addEventListener('scroll',(e)=>{
-              const nav = document.querySelector('.navbar');
-              const logo = document.querySelectorAll('.title');
-              const logo2 = document.querySelector('.logo');
-              if(window.pageYOffset>0){
-                nav.classList.add("add-shadow");
-                logo.forEach((x) => {
-                    x.classList.add("logoresize");
-                });
-                
-                logo2.classList.add("adjustmargin");
-              }else{
-                nav.classList.remove("add-shadow");
-                logo.forEach((x) => {
-                    x.classList.remove("logoresize");
-                });
-                logo2.classList.remove("adjustmargin");
-              }
-            });
+            
           </script>
 
           
