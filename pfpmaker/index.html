@@ -6,13 +6,14 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport"
         content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
-        <meta name="description" content="Gravity Falls Avatar Maker. art and programming by grei / asdfgray.com">
-        <meta name="keywords" content="gravity falls avatar maker, gravity falls fan art, avatar maker, cartoon avatar maker">
+        <meta name="description" content="Gravity Falls inspired PFP maker by grei.">
+        <meta name="keywords" content="pfpmaker, profile pic maker, avatar maker, gravity falls style avatar maker">
 
         <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
-        <link href="../fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+        <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
 
         <!-- BOOTSTRAP 4.4 -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -25,60 +26,80 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <!-- CUSTOM STYLE -->
+        
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
         <link href="../style.css" rel="stylesheet" type="text/css">
         <link href="../pfpmaker/style.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="../scrollup.js"></script>
         <script src="../pfpmaker/script.js"></script>
         <script src="../pfpmaker/html2canvas.min.js"></script>
         <script>
-            $(function() {
+        $(function() {
             AOS.init();
+        });
+            window.addEventListener('scroll',(e)=>{
+              const nav = document.querySelector('.navbar');
+              const logo = document.querySelectorAll('.title');
+              const logo2 = document.querySelector('.logo');
+              if(window.pageYOffset>0){
+                nav.classList.add("add-shadow");
+                logo.forEach((x) => {
+                    x.classList.add("logoresize");
+                });
+                
+                logo2.classList.add("adjustmargin");
+              }else{
+                nav.classList.remove("add-shadow");
+                logo.forEach((x) => {
+                    x.classList.remove("logoresize");
+                });
+                logo2.classList.remove("adjustmargin");
+              }
             });
-            </script>
+          </script>
 
-<script></script>
-    <audio src="/pfpmaker/josh.mp3"></audio>
+          
 
-    </head>
-
-    <body onload="preload()">
-        <div class="container-fluid">
-            <div class="row" id="header">
-                <div class="col-sm-12 text-center flex-column section-header">
-                    <!-- <img src="img/avi.png" class="rounded mx-auto d-block avatar" alt="..."> -->
-                    <h1>espresso for the soul</h1>
-                    <h5 class="nav">
-                            <ol id="nav-mobile">
-                                    <li><a href="../"><i class="fas fa-home"></i></a></li>
-                                    <li><a href="../projects/"><i class="fas fa-book"></i></a></li>
-                                    <li><a href="../thanks/"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="../commissions/"><i class="fas fa-sticky-note"></i></a></li>
-                                    <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
-                                    <!-- <li><a href="../twitch/"><i class="fab fa-twitch"></i></a></li> -->
-                                    <li><a href="../about/"><i class="fas fa-question"></i></a></li>
+    <!-- <body> -->
+        <body onload="preload()">
+            <div class="container-fluid">
+                <div class="row" id="header">
+                    <div class="col-sm-12 text-center flex-column section-header">
+                        <!-- <img src="img/avi.png" class="rounded mx-auto d-block avatar" alt="..."> -->
+                        <h1>espresso for the soul</h1>
+                        <h5 class="nav">
+                                <ol id="nav-mobile">
+                                        <li><a href="../"><i class="fas fa-home"></i></a></li>
+                                        <li><a href="../projects/"><i class="fas fa-book"></i></a></li>
+                                        <li><a href="../icons/"><i class="fas fa-user"></i></a></li>
+                                        <li><a href="../thanks/"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="../commissions/"><i class="fas fa-sticky-note"></i></a></li>
+                                        <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
+                                        <!-- <li><a href="../twitch/"><i class="fab fa-twitch"></i></a></li> -->
+                                        <li><a href="../about/"><i class="fas fa-question"></i></a></li>
+                                </ol>
+                                <ol id="nav-desktop">
+                                    <li><a href="../">my works</a></li>
+                                    <li><a href="../projects/">projects</a></li>
+                                    <li><a href="../icons/">icons</a></li>
+                                    <li><a href="../thanks/">thanks</a></li>
+                                    <li><a href="../commissions/">commissions</a></li>
+                                    <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
+                                    <!-- <li><a href="../twitch/">twitch</a></li> -->
+                                    <li><a href="../about/">about</a></li>
                             </ol>
-                            <ol id="nav-desktop">
-                                
-                                <li><a href="../">my works</a></li>
-                                <li><a href="../projects/">projects</a></li>
-                                <li><a href="../thanks/">thanks</a></li>
-                                <li><a href="../commissions/">commissions</a></li>
-                                <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
-                                <!-- <li><a href="../twitch/">twitch</a></li> -->
-                                <li><a href="../about/">about</a></li>
-                        </ol>
-                    </h5>
+                        </h5>
+                </div>
+                </div>
             </div>
-            </div>
-        </div>
         <div class="container">
             <div class="col-sm-12 d-flex align-items-center justify-content-center">
                 <img src="/pfpmaker/gravityfallsedit.png" class="img-fluid" style="width:300px;" hidden>
-                
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid section section-1-bg pfpmaker d-flex align-items-center justify-content-center">
             
 
             <div class="row section-body">
@@ -90,17 +111,23 @@
                         <div class="loader-box align-items-center justify-content-center flex-column"><img src="/pfpmaker/pet.gif" class="img-fluid"><span class="mt-3">calm down. we're loading traits...</span></div>
                         <div class="pfp-box img-fluid" id="pfp">
                             
+                            
                             <div class="bounding-box bg" id="bg"></div>
-                            <div class="bounding-box skin"></div>
+                            <div class="bounding-box base"></div>
                             <div class="bounding-box eyes"></div>
-                            <div class="bounding-box mouth"></div>
-                            <div class="bounding-box nose"></div>
+                            
+                            
                             <div class="bounding-box headwear"></div>
                             <div class="bounding-box hair"></div>
+                            <div class="bounding-box accessory"></div>
+                            <div class="bounding-box nose"></div>
+                            
                             
                             <div class="bounding-box top"></div>
-                            <div class="bounding-box jacket"></div>
-                            <div class="bounding-box outline"></div>
+                            <div class="bounding-box outerwear"></div>
+                            <div class="bounding-box mouth"></div>
+                            <div class="bounding-box item"></div>
+                            <div class="bounding-box outline" id="outline"></div>
 
                         </div>
                         
@@ -111,64 +138,188 @@
                         
                     </div>
                     <div class="pfp-options col-lg-4 col-md-6 col-sm-12">
-                        <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
-                            <div class="op"><h6>BODY TYPE</h6><div class="opBtn left"><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type">coming soon</div><div class="opBtn right"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
-                        </div>
 
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
-                            <div class="op"><h6>SKIN COLOR</h6><div class="colorsets d-flex">
-                                <div class="swatch skincolor pale" name="pale" value="0" onclick="setSkinColor(this)"></div>
-                                <div class="swatch skincolor light" name="light" value="1" onclick="setSkinColor(this)"></div>
-                                <div class="swatch skincolor tan" name="tan" value="2" onclick="setSkinColor(this)"></div>
-                                <div class="swatch skincolor dark" name="dark" value="3" onclick="setSkinColor(this)"></div></div>
+                            <div class="op"><h6>BASE</h6><div class="colorsets d-flex">
+                                <div class="swatch basecolor pale" name="pale" value="0" onclick="setbaseColor(this)"></div>
+                                <div class="swatch basecolor light" name="light" value="1" onclick="setbaseColor(this)"></div>
+                                <div class="swatch basecolor tan" name="tan" value="2" onclick="setbaseColor(this)"></div>
+                                <div class="swatch basecolor dark" name="dark" value="3" onclick="setbaseColor(this)"></div>
+                                <div class="swatch basecolor undead" name="undead" value="4" onclick="setbaseColor(this)"></div></div>
                             </div>
-                        </div>
-                        <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
-                            <div class="op" hidden><h6>SKIN</h6><div class="opBtn left" name="skin" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type skin" ></div><div class="opBtn right" name="skin" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6>SKIN MARK</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6>TATTOO</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type" >coming soon</div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
                         </div>
 
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                             <div class="op"><h6>EYES</h6><div class="opBtn left" name="eyes" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type eyes" value=""></div><div class="opBtn right" name="eyes" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6>NOSE</h6><div class="opBtn left" name="nose" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type nose" value=""></div><div class="opBtn right" name="nose" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6>MOUTH</h6><div class="opBtn left" name="mouth" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type mouth" value=""></div><div class="opBtn right" name="mouth" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6>FACIAL HAIR</h6><div class="opBtn left" name="hair"><i class="fas fa-angle-left fa-lg"></i></div><div class="type"></div><div class="opBtn right" name="hair"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            
                             <div class="op"><h6>HAIR</h6><div class="opBtn left" name="hair" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type hair"></div><div class="opBtn right" name="hair" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             
 
                         </div>
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                             <div class="op"><h6>HAIR COLOR</h6><div class="colorsets d-flex">
+                                
                                 <div class="swatch haircolor white" name="white" value="1" onclick="setHairColor(this)"></div>
                                 <div class="swatch haircolor blonde" name="blonde" value="1" onclick="setHairColor(this)"></div>
                                 <div class="swatch haircolor orange" name="orange" value="3" onclick="setHairColor(this)"></div>
-                                <div class="swatch haircolor brown" name="brown" value="0" onclick="setHairColor(this)"></div>
+                                <div class="swatch haircolor brown" name="brown" value="1" onclick="setHairColor(this)"></div>
                                 <div class="swatch haircolor darkbrown" name="darkbrown" value="2" onclick="setHairColor(this)"></div>
+                                <div class="swatch haircolor black" name="black" value="0" onclick="setHairColor(this)"></div>
+                                <div class="swatch haircolor blue" name="blue" value="0" onclick="setHairColor(this)"></div>
                             </div></div>
-                            <!-- <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <!-- <div class="op"><h6>body TYPE</h6><div class="opBtn left" name="body" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type body"></div><div class="opBtn right" name="body" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6><div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div>SHIRT</h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6><div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div>OUTERWEAR</h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket"></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6><div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div>OUTERWEAR</h6><div class="opBtn left" name="outerwear" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type outerwear"></div><div class="opBtn right" name="outerwear" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div> -->
                         </div>
+                        
                         
                     </div>
 
                     <div class="pfp-options col-lg-4 col-md-6 col-sm-12">
+                        
+                        
+
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
-                            <div class="op"><h6>BUST TYPE</h6><div class="opBtn left" name="bust" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type bust"></div><div class="opBtn right" name="bust" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>BACKGROUND</h6><div class="colorsets d-flex">
+                                
+                                <div class="swatch bgcolor type-a" name="type-a" value="1" onclick="setBgColor(this)"></div>
+                                <div class="swatch bgcolor type-b" name="type-b" value="1" onclick="setBgColor(this)"></div>
+                                <div class="swatch bgcolor type-c" name="type-c" value="3" onclick="setBgColor(this)"></div>
+                                <div class="swatch bgcolor type-d" name="type-d" value="1" onclick="setBgColor(this)"></div>
+                                <div class="swatch bgcolor type-e" name="type-e" value="2" onclick="setBgColor(this)"></div>
+                                <div class="swatch bgcolor type-f" name="type-f" value="0" onclick="setBgColor(this)"></div>
+                                <div class="swatch bgcolor type-g" name="type-g" value="0" onclick="setBgColor(this)"></div>
+                            </div></div>
+                            <!-- <div class="op"><h6>body TYPE</h6><div class="opBtn left" name="body" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type body"></div><div class="opBtn right" name="body" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6><div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div>SHIRT</h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6><div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div>OUTERWEAR</h6><div class="opBtn left" name="outerwear" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type outerwear"></div><div class="opBtn right" name="outerwear" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div> -->
+                        </div>
+
+                        <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
+                            <div class="op"><h6>BODY TYPE</h6><div class="opBtn left" name="body" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type body"></div><div class="opBtn right" name="body" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                             <div class="op"><h6 class="d-flex">SHIRT<div class="extrabtn removeShirt align-items-center justify-content-center" onclick=removeShirt();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="top" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type top" value="1">1</div><div class="opBtn right" name="top" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6 class="d-flex">OUTERWEAR<div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="jacket" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type jacket" value=""></div><div class="opBtn right" name="jacket" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6 class="d-flex">OUTERWEAR<div class="extrabtn removeOuter align-items-center justify-content-center" onclick=removeOuter();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="outerwear" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type outerwear" value=""></div><div class="opBtn right" name="outerwear" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
                         </div>
                         <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
                             <div class="op"><h6 class="d-flex">HEADWEAR<div class="extrabtn removeHeadwear align-items-center justify-content-center" onclick=removeHeadwear();><i class="fas fa-times"></i></div></h6><div class="opBtn left" name="headwear" onclick="prev(this)"><i class="fas fa-angle-left fa-lg"></i></div><div class="type headwear" value=""></div><div class="opBtn right" name="headwear" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6>Accessory</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type" ></div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg"></i></div></div>
-                            <div class="op"><h6>HELD ITEM</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type" >coming soon</div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
-                            <div class="op"><h6>PET</h6><div class="opBtn left" name="skin" ><i class="fas fa-angle-left fa-lg" hidden></i></div><div class="type" >coming soon</div><div class="opBtn right" name="skin"><i class="fas fa-angle-right fa-lg" hidden></i></div></div>
-                            <div class="op"><h6>BACKGROUND</h6><div class="opBtn left" name="bg" onclick="prev(this)" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type bg" ></div><div class="opBtn right" name="bg" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>Eyewear</h6><div class="opBtn left" name="accessory" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type accessory" ></div><div class="opBtn right" name="accessory" name="accessory" onclick="next(this)"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            <div class="op"><h6>HELD ITEM</h6><div class="opBtn left" name="item" ><i class="fas fa-angle-left fa-lg"></i></div><div class="type item" ></div><div class="opBtn right" name="item"><i class="fas fa-angle-right fa-lg"></i></div></div>
+                            </div>
+
+                        <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
+                            <div class="container" hidden>
+                                <div class="row">
+                                    <div class="col-6">
+<pre class="stats" hidden>
+Base/Pale:               <i class="base0">0</i>/450
+Base/Light:              <i class="base1">0</i>/450
+Base/Tan:                <i class="base2">0</i>/450
+Base/Dark:               <i class="base3">0</i>/450
+Base/Undead:             <i class="base4">0</i>/200
+
+Eyes/Possessed:          <i class="eyes0">0</i>/200
+Eyes/Surprised:          <i class="eyes1">0</i>/200
+Eyes/Excited:            <i class="eyes2">0</i>/200
+Eyes/Annoyed:            <i class="eyes3">0</i>/200
+Eyes/Sus:                <i class="eyes4">0</i>/200
+Eyes/Sexy:               <i class="eyes5">0</i>/200
+Eyes/Angry:              <i class="eyes6">0</i>/200
+Eyes/Tired:              <i class="eyes7">0</i>/200
+Eyes/Indifferent:        <i class="eyes8">0</i>/200
+Eyes/Meditate:           <i class="eyes9">0</i>/200
+
+Mouth/Laugh:             <i class="mouth0">0</i>/200
+Mouth/Wut:               <i class="mouth1">0</i>/200
+Mouth/:                  <i class="mouth2">0</i>/200
+Mouth/:                  <i class="mouth3">0</i>/200
+Mouth/:                  <i class="mouth4">0</i>/200
+Mouth/:                  <i class="mouth5">0</i>/200
+Mouth/:                  <i class="mouth6">0</i>/200
+Mouth/:                  <i class="mouth7">0</i>/200
+Mouth/:                  <i class="mouth8">0</i>/200
+Mouth/:                  <i class="mouth9">0</i>/200
+
+Hair/Fluffy:             <i class="hair0">0</i>/225
+Hair/Short:              <i class="hair1">0</i>/225
+Hair/Short Dreads:       <i class="hair2">0</i>/225
+Hair/Ronin:              <i class="hair3">0</i>/100
+Hair/Curly:              <i class="hair4">0</i>/225
+Hair/:                   <i class="hair5">0</i>/225
+Hair/:                   <i class="hair6">0</i>/225
+Hair/:                   <i class="hair7">0</i>/225
+Hair/:                   <i class="hair8">0</i>/225
+Hair/:                   <i class="hair9">0</i>/100
+</pre>
+                                    </div>
+                                    <div class="col-6">
+<pre class="stats">
+Head/Cap A:              <i class="head0">0</i>/114
+Head/Cap B:              <i class="head1">0</i>/114
+Head/Cap C:              <i class="head2">0</i>/114
+Head/Headband A:         <i class="head3">0</i>/114
+Head/Headband B:         <i class="head4">0</i>/114
+Head/Bucket Hat:         <i class="head5">0</i>/114
+Head/Beanie A:           <i class="head6">0</i>/114
+Head/Beanie B:           <i class="head7">0</i>/114
+Head/Fluffy Ears:        <i class="head8">0</i>/114
+Head/Lumberjack:         <i class="head9">0</i>/114
+Head/Kitsune Mask:       <i class="head10">0</i>/30
+Head/New:                <i class="head11">0</i>/30
+
+Body/Type A:             <i class="body0">0</i>/998
+Body/Type B:             <i class="body1">0</i>/998
+
+Top/Shirt:               <i class="shirt0">0</i>/450
+Top/Turtleneck:          <i class="shirt1">0</i>/450
+Top/Sleeveless:          <i class="shirt2">0</i>/450
+Top/Tank Top:            <i class="shirt3">0</i>/450
+Top/Bandage:             <i class="shirt4">0</i>/200
+
+Outer/Plaid:             <i class="outer1">0</i>/114
+Outer/Button A:          <i class="outer2">0</i>/114
+Outer/Button B:          <i class="outer3">0</i>/114
+Outer/Tracksuit A:       <i class="outer4">0</i>/114
+Outer/Tracksuit B:       <i class="outer5">0</i>/114
+Outer/Gilet A:           <i class="outer6">0</i>/114
+Outer/Gilet B:           <i class="outer7">0</i>/114
+Outer/Hoodie A:          <i class="outer8">0</i>/114
+Outer/Hoodie B:          <i class="outer9">0</i>/114
+Outer/Trench Coat:       <i class="outer10">0</i>/114
+Outer/Yukata:            <i class="outer11">0</i>/30
+Outer/Fighter:           <i class="outer12">0</i>/30
+
+Access/3D Specs:         <i class="access1">0</i>/120
+Access/Aviator:          <i class="access2">0</i>/120
+Access/Round Specs:      <i class="access3">0</i>/120
+Access/Piercing A:       <i class="access4">0</i>/120
+Access/Piercing B:       <i class="access5">0</i>/120
+
+Hand/Earth:              <i class="hand1">0</i>/50
+Hand/Fire:               <i class="hand2">0</i>/50
+Hand/Water:              <i class="hand3">0</i>/50
+Hand/Air:                <i class="hand4">0</i>/50
+</pre>
+                                                                            </div>
+                                </div>
+                            </div>
+                    
+                    
+                         </div>
+
+                        <div class="pfpset" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500" hidden>
+                           <pre class="trait-metadata">
+
+                           </pre>
+                           <div class="pfpbtnsets d-flex justify-content-end" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">
+                            <div type="button" class="button d-flex align-items-center justify-content-center pfpbtn" id="downloadBtn" onclick="downloadJson()"><i class="fas fa-save"></i></div>
+                        </div>
                         </div>
                     </div>
+
+                    
                     
 
                     
@@ -191,7 +342,7 @@
                 
                 
             <div class="col-sm-12 d-flex justify-content-center">
-                <div class="ads-footer">
+                <!-- <div class="ads-footer">
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6805605795676003"
                         crossorigin="anonymous"></script>
                     <ins class="adsbygoogle"
@@ -203,18 +354,14 @@
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                </div>
+                </div> -->
             </div>
         </div>
 
         <div class="footer">
             <div class="footer-links text-center">
                 <ol>
-                    <a href="https://www.facebook.com/grei.draws/" target="_blank"><li><i class="fab fa-facebook"></i></li></a>
-                    <a href="https://www.instagram.com/grei.draws/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
-                    <a href="https://twitter.com/0xSe7en_" target="_blank"><li><i class="fab fa-twitter"></i></li></a>
-                    <a href="https://www.twitch.tv/grei" target="_blank"><li><i class="fab fa-twitch"></i></li></a>
-                    <a href="https://www.youtube.com/channel/UCQJ44JHlnt3OxFtvyOZgteA" target="_blank"><li><i class="fab fa-youtube"></i></li></a>
+                    
                 </ol>
                 <small>Copyright &copy; 2016-2024 Se7en. All Rights Reserved</small>
             </div>

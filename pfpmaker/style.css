@@ -17,7 +17,8 @@ body{
     font-family: Gravity Falls;
 }
 .loader-box{
-    display: flex;
+    /* display: flex; */
+    display: none;
     height:500px;
     width:500px;
     z-index: 10;
@@ -26,7 +27,8 @@ body{
     height:500px;
     width:500px;
     z-index: 10;
-    display:none;
+    /* display:none; */
+    display: flex;
 }
 .bounding-box{
     border-radius:2em;
@@ -56,7 +58,7 @@ body{
 }
 .pfpbtn{
     z-index: 10;
-    font-size:130%;
+    
     margin-right:10px;
     margin-top:10px;
     color:#1a1a1a;
@@ -65,6 +67,9 @@ body{
     width:50px;
     border-radius:.5em;
     background-color: rgba(0,0,0,.025);
+}
+.pfpbtn i{
+    font-size:130% !important;
 }
 #donate{
     width:350px;
@@ -92,12 +97,16 @@ body{
     color:#c0c0c0;
     /* border-radius: 1em; */
     font-weight: normal;
-    font-size: 100%;
+    
     height: 22px;
     width:22px;
     /* border: 1px solid #c0c0c0; */
     cursor: pointer;
     margin-left:10px;
+}
+.extrabtn i{
+    font-size: 90% !important;
+    margin-top: 8px;
 }
 .removeOuter{
 }
@@ -110,22 +119,26 @@ body{
     border-radius: 10em;
     cursor: pointer;
 }
-.swatch.haircolor.active{
+.swatch.haircolor.active,
+.swatch.basecolor.active,
+.swatch.bgcolor.active{
     /* border: 4px inset white; */
     border: 3px solid white;
     outline: 5px solid #c0c0c0;
 }
-.swatch.skincolor.active{
+.swatch.haircolor:hover,
+.swatch.basecolor:hover,
+.swatch.bgcolor:hover{
     border: 3px solid white;
-    outline: 5px solid #c0c0c0;
+    outline: 5px solid rgba(0, 0, 0,.5);
+    transition: .1s;
 }
+
 .swatch.white{
     background-color: #fdf8f5;
     border: solid 1px #c0c0c0;
 }
-.swatch.darkbrown{
-    background-color: #4a382e;
-}
+
 .swatch.brown{
     background-color: #7e462d;
 }
@@ -138,21 +151,55 @@ body{
 .swatch.orange{
     background-color: #ae471a;
 }
+.swatch.darkbrown{
+    background-color: #4a382e;
+}
+.swatch.black{
+    background-color: #3e332f;
+}
+.swatch.blue{
+    background-color: #3b3752;
+}
 .colorsets{
     width:350px;
 }
 /* SKIN COLORS */
 .swatch.pale{
-    background-color: #ffe5dc;
+    background-color: #ffefdc;
 }
 .swatch.light{
-    background-color: #ffd0b4;
+    background-color: #ffdab4;
 }
 .swatch.tan{
-    background-color: #efb698;
+    background-color: #f0b589;
 }
 .swatch.dark{
     background-color: #6e544d;
+}
+.swatch.undead{
+    background-color: #b7ab88;
+}
+/* BG COLORS */
+.swatch.type-a{
+    background-color: #f9efd4;
+}
+.swatch.type-b{
+    background-color: #cfbaa2;
+}
+.swatch.type-c{
+    background-color: #f8d081;
+}
+.swatch.type-d{
+    background-color: #da6c34;
+}
+.swatch.type-e{
+    background-color: #6f8b90;
+}
+.swatch.type-f{
+    background-color: #524d58;
+}
+.swatch.type-g{
+    background-color: #342e30;
 }
 .pfpbtn:hover{
     background-color: rgba(0,0,0,.1);
@@ -170,20 +217,23 @@ body{
 .op h6{
     font-weight: bold;
     width:150px;
-    font-size:120%;
+    font-size:140%;
     padding:5px;
     margin:0;
 }
 .op .type{
     display: flex;
+    text-transform: uppercase;
     align-items: center!important;
     justify-content: center !important;
     border:1px solid rgba(0,0,0,.1);
     /* background-color: rgba(0,0,0,.03); */
     width:200px;
     height:30px;
-    border-radius: .5em;
+    border-radius: 10em;
     margin: 0 20px;
+    font-size: 80%;
+    font-weight: 600;
 }
 .opBtn{
     cursor: pointer;
@@ -224,7 +274,10 @@ body{
     background-image: url(...);
 }
 .outline{
-    background-image: url(/pfpmaker/traits/outline.png);
+    background-image: url(/pfpmaker/traits/outline2.png);
+    /* opacity: .5; */
+    /* mix-blend-mode: screen; */
+    /* background:#2195cb; */
 }
 /* .outline.b1{
     background-image: url(/pfpmaker/traits/outline.png);
@@ -271,6 +324,15 @@ h3{
     font-size:20px;
     margin-bottom: 0;
     padding:20px;
+}
+.trait-metadata,.stats{
+    line-height: normal;
+}
+.stats i{
+    font-size: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    font-family: inherit;
 }
 
 @media (max-width: 1200px){

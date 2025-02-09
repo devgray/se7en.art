@@ -49,6 +49,18 @@ h4{
 p{
     font-size:1.2em;
     padding-bottom:20px;
+
+}
+.overlay-img {
+    width:200px;
+    position: fixed;
+    z-index: 1000;
+    bottom:0;
+    cursor: pointer;
+}
+.overlay-img img{
+    height:50px;
+    
 }
 #header{
     /* background-color: #fffcf2; */
