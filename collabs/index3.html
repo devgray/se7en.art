@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>brand collabs - espresso for the soul</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Brand collaborations by grei. Emotes, animations and Stream Deck art made together with brands like Elgato.">
+    <meta property="og:image" content="https://asdfgray.com/about/aboutpfp.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://asdfgray.com/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://asdfgray.com/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://asdfgray.com/favicon_io/favicon-16x16.png">
+
+    <!-- Same stack as the rest of asdfgray.com: Bootstrap 4.4, Font Awesome, Montserrat, site stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://asdfgray.com/fontawesome/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://asdfgray.com/style.css" rel="stylesheet" type="text/css">
+    <!-- When this file lives at asdfgray.com/brand-collabs/ you can switch the four links above to ../ paths, like the other subpages do. -->
+
+  
+
+        
+    <style>
+        /* ---------- Page specific styles. Everything else comes from style.css ---------- */
+
+        html { scroll-behavior: smooth; }
+        body { background: #fff; color: #000; overflow-x: hidden; }
+
+        /* Brand switcher under the site header. One logo now, more later. */
+        .brand-bar {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        .brand-bar ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 50px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .brand-bar a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 64px;
+            padding: 6px 4px 10px;
+            color: #000;
+            text-decoration: none;
+            opacity: .45;
+            filter: grayscale(1);
+            transition: opacity .25s ease, filter .25s ease;
+            border-bottom: solid 1px transparent;
+        }
+        .brand-bar a img { height: 100%; width: auto; display: block; }
+        .brand-bar a span.brand-fallback {
+            font-family: ProductSansBold, Montserrat, sans-serif;
+            font-weight: 800;
+            font-size: 2.2em;
+            letter-spacing: -.02em;
+            line-height: 1;
+        }
+        .brand-bar a:hover,
+        .brand-bar a:focus-visible,
+        .brand-bar a.is-active {
+            opacity: 1;
+            filter: none;
+            border-bottom-color: #000;
+            outline: none;
+        }
+
+        /* Bento marquee. Rows alternate direction, tiles are desaturated until hovered. */
+        .bento-marquee {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            overflow: hidden;
+            padding: 6px 0 20px;
+        }
+        .bento-row {
+            display: flex;
+            width: max-content;
+            gap: 12px;
+            padding: 6px 0;
+            will-change: transform;
+        }
+        .bento-row.to-left  { animation: bento-left  var(--dur, 70s) linear infinite; }
+        .bento-row.to-right { animation: bento-right var(--dur, 70s) linear infinite; }
+        .bento-marquee:hover .bento-row { animation-play-state: paused; }
+        .bento-track { display: flex; gap: 12px; }
+
+        .bento-tile {
+            position: relative;
+            display: block;
+            height: 220px;
+            border-radius: 1em;
+            overflow: hidden;
+            background: #f3f3f3;
+            text-decoration: none;
+            color: #000;
+            flex: 0 0 auto;
+            cursor: pointer;
+        }
+        .bento-tile.w-1 { width: 220px; }
+        .bento-tile.w-2 { width: 452px; }
+        .bento-tile.h-half { height: 104px; }
+        .bento-stack { display: flex; flex-direction: column; gap: 12px; flex: 0 0 auto; }
+
+        .bento-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(1);
+            opacity: .45;
+            transform: scale(1.001);
+            transition: filter .35s ease, opacity .35s ease, transform .35s ease;
+        }
+        .bento-tile .bento-caption {
+            position: absolute;
+            left: 14px;
+            bottom: 12px;
+            font-size: .8em;
+            padding: 4px 12px;
+            border-radius: 10em;
+            background: rgba(26,26,26,.85);
+            color: #fff;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity .3s ease, transform .3s ease;
+            white-space: nowrap;
+        }
+        .bento-tile:hover img,
+        .bento-tile:focus-visible img {
+            filter: none;
+            opacity: 1;
+            transform: scale(1.03);
+        }
+        .bento-tile:hover .bento-caption,
+        .bento-tile:focus-visible .bento-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bento-tile:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+
+        /* Placeholder tiles for motifs that do not have an image yet */
+        .bento-tile.is-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ededed;
+            color: #999;
+            font-size: .85em;
+        }
+        .bento-tile.is-placeholder:hover { background: #e2e2e2; color: #000; }
+
+        @keyframes bento-left  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes bento-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+        /* Brand sections. Same layout language as the projects page. */
+        .brand-section { scroll-margin-top: 30px; margin-top: 80px; }
+        .brand-section .brand-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 8px;
+        }
+        .brand-section .brand-title img { height: 36px; }
+        .brand-section .brand-title h3 { margin: 0; }
+        .brand-section .brand-intro {
+            max-width: 620px;
+            margin: 0 auto 40px;
+            opacity: .7;
+        }
+        .collab-card { margin-bottom: 30px; }
+        .collab-card .img-wrap { padding: 0; }
+        .collab-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 1em;
+            filter: grayscale(1);
+            transition: filter .3s ease, transform .3s ease;
+        }
+        .collab-card:hover img { filter: none; transform: translateY(-2px); }
+        .collab-card h4 { font-size: 1.15em; text-align: left; margin: 14px 0 4px; }
+        .collab-card p { font-size: 1em; text-align: left; opacity: .75; }
+        .collab-card p a { color: #000; font-family: ProductSansBold, Montserrat, sans-serif; }
+        .collab-tag {
+            display: inline-block;
+            font-size: .75em;
+            padding: 3px 10px;
+            border-radius: 10em;
+            background: #1a1a1a;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .site-footer { margin-top: 60px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .bento-row { animation: none !important; }
+            .bento-marquee { overflow-x: auto; }
+        }
+        @media (max-width: 768px) {
+            .bento-tile { height: 160px; }
+            .bento-tile.w-1 { width: 160px; }
+            .bento-tile.w-2 { width: 332px; }
+            .bento-tile.h-half { height: 74px; }
+            .brand-bar a { height: 48px; }
+            .brand-section { margin-top: 50px; }
+        }
+        @media (max-width: 480px) {
+            .brand-bar ul { gap: 6px 28px; }
+            .brand-section .brand-title { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- Site header, identical to the other pages -->
+        <div class="row" id="header">
+            <div class="col-sm-12 text-center flex-column section-header">
+                <h1>espresso for the soul</h1>
+                <h5 class="nav">
+                    <ol id="nav-mobile">
+                        <li><a href="https://asdfgray.com/"><i class="fas fa-home"></i></a></li>
+                        <li><a href="https://asdfgray.com/projects/"><i class="fas fa-book"></i></a></li>
+                        <li><a href="" id="active"><i class="fas fa-handshake"></i></a></li>
+                        <li><a href="https://asdfgray.com/thanks/"><i class="far fa-heart"></i></a></li>
+                        <li><a href="https://asdfgray.com/commissions/"><i class="fas fa-sticky-note"></i></a></li>
+                        <li><a href="https://asdfgray.com/about/"><i class="fas fa-question"></i></a></li>
+                    </ol>
+                    <ol id="nav-desktop">
+                        <li><a href="https://asdfgray.com/">my works</a></li>
+                        <li><a href="https://asdfgray.com/projects/">projects</a></li>
+                        <li><a href="" id="active">brand collabs</a></li>
+                        <li><a href="https://asdfgray.com/thanks/">thanks</a></li>
+                        <li><a href="https://asdfgray.com/commissions/">commissions</a></li>
+                        <li><a href="https://asdfgray.com/about/">about</a></li>
+                    </ol>
+                </h5>
+            </div>
+        </div>
+
+        <!-- Brand switcher. Add one <li> per brand and give the matching section the same id. -->
+        <div class="row">
+            <div class="col-sm-12 brand-bar">
+                <ul id="brand-switcher">
+                    <li>
+                        <a href="#brand-elgato" data-brand="elgato" class="is-active" title="Elgato">
+                            <!-- Drop the official logo file in img/brands/ and remove the fallback span. -->
+                            <img src="img/brands/elgato.svg" alt="Elgato" onerror="this.nextElementSibling.hidden=false; this.remove();">
+                            <span class="brand-fallback" hidden>elgato</span>
+                        </a>
+                    </li>
+                    <!-- Next brand goes here:
+                    <li><a href="#brand-xyz" data-brand="xyz"><img src="img/brands/xyz.svg" alt="XYZ"></a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bento marquee. Tiles are filled from the BENTO array at the bottom of the page. -->
+        <div class="bento-marquee" id="bento-marquee" aria-label="Brand collab motifs"></div>
+
+        <!-- ===================== ELGATO ===================== -->
+        <section class="row section-body brand-section" id="brand-elgato" data-brand="elgato">
+            <div class="col-sm-12 text-center">
+                <div class="brand-title">
+                    <h3>Brand Collabs x Elgato</h3>
+                </div>
+                <p class="brand-intro">
+                    Animations, emotes and Stream Deck key art made together with the Elgato team in Germany.
+                    Hover a piece to see it in color.
+                </p>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-6 col-lg-3 collab-card">
+                        <div class="img-wrap">
+                            <img src="https://asdfgray.com/img/animated/elgato%20thumb%20dance.gif" alt="Thumb Dance Challenge animation for ElgatoDE">
+                        </div>
+                        <span class="collab-tag">animation</span>
+                        <h4>Thumb Dance Challenge</h4>
+                        <p>A short animation made for <a href="https://www.tiktok.com/@elgato_de/video/7571399037987884310" target="_blank" rel="noopener">ElgatoDE</a> on TikTok.</p>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 collab-card">
+                        <div class="img-wrap">
+                            <img src="https://asdfgray.com/img/Squirrel%20Deck%20preview.png" alt="Squirrel Deck, Stream Deck key art">
+                        </div>
+                        <span class="collab-tag">stream deck</span>
+                        <h4>Squirrel Deck</h4>
+                        <p>Custom Stream Deck key art. Gift art for <a href="https://twitch.tv/Sleepyrisu" target="_blank" rel="noopener">Sleepyrisu</a>.</p>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 collab-card">
+                        <div class="img-wrap">
+                            <img src="https://asdfgray.com/img/Cat%20Deck.png" alt="Cat Deck, Stream Deck key art">
+                        </div>
+                        <span class="collab-tag">stream deck</span>
+                        <h4>Cat Deck</h4>
+                        <p>Stream Deck key set commissioned by <a href="https://twitch.tv/Spiritendo" target="_blank" rel="noopener">Spiritendo</a>.</p>
+                    </div>
+
+                    <!-- Copy this block for the next Elgato project. -->
+                    <div class="col-sm-6 col-lg-3 collab-card">
+                        <div class="img-wrap">
+                            <img src="img/collabs/elgato-placeholder.png" alt="Upcoming Elgato project" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22><rect width=%22400%22 height=%22400%22 fill=%22%23ededed%22/><text x=%22200%22 y=%22208%22 text-anchor=%22middle%22 font-family=%22Montserrat,sans-serif%22 font-size=%2222%22 fill=%22%23999%22>coming soon</text></svg>'">
+                        </div>
+                        <span class="collab-tag">wip</span>
+                        <h4>Next up</h4>
+                        <p>Something new with the Elgato community. Code <b>grei</b> gets you 5% off at <a href="https://elgato.sjv.io/grei" target="_blank" rel="noopener">elgato.com</a>.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== NEXT BRAND (template) =====================
+        <section class="row section-body brand-section" id="brand-xyz" data-brand="xyz">
+            <div class="col-sm-12 text-center">
+                <div class="brand-title"><h3>Brand Collabs x XYZ</h3></div>
+                <p class="brand-intro">One or two sentences about the collab.</p>
+            </div>
+            <div class="col-sm-12"><div class="row justify-content-center"> ...collab-cards... </div></div>
+        </section>
+        ================================================================== -->
+
+        <!-- Footer, identical to the other pages -->
+        <div class="footer site-footer">
+            <div class="footer-links text-center">
+                <ol>
+                    <li><a href="https://www.facebook.com/grei.draws/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" style="color:#000"></i></a></li>
+                    <li><a href="https://www.instagram.com/grei.draws/" target="_blank" rel="noopener"><i class="fab fa-instagram fa-lg" style="color:#000"></i></a></li>
+                    <li><a href="https://twitter.com/0xgrei" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" style="color:#000"></i></a></li>
+                    <li><a href="https://www.twitch.tv/grei" target="_blank" rel="noopener"><i class="fab fa-twitch fa-lg" style="color:#000"></i></a></li>
+                </ol>
+                <small>Copyright &copy; 2016-2026 asdfgray.com. All Rights Reserved</small>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        /* ---------- Bento motifs ----------
+           Each entry becomes one tile. Fields:
+             src     image url (leave empty for a grey placeholder tile)
+             label   caption shown on hover
+             href    optional link, defaults to the brand section
+             size    "1" square, "2" wide, "half" half height (two halves are stacked automatically)
+             brand   which section the tile belongs to
+        */
+        const BENTO = [
+            // The Thumb Dance gif is 24 MB, too heavy for the marquee. Use a still frame here once you have one.
+            { src: "https://asdfgray.com/img/frey%20wallpaper.png", label: "Frey", size: "2", brand: "elgato" },
+            { src: "https://asdfgray.com/img/Squirrel%20Deck%20preview.png", label: "Squirrel Deck", size: "1", brand: "elgato" },
+            { src: "https://asdfgray.com/img/Cat%20Deck.png", label: "Cat Deck", size: "half", brand: "elgato" },
+            { src: "https://asdfgray.com/img/Lazrik%20on%20Twitch.png", label: "Lazrik Workspace", size: "half", brand: "elgato" },
+            { src: "", label: "next motif", size: "1", brand: "elgato" },
+            { src: "https://asdfgray.com/img/sleepy%20trainer.png", label: "Sleepy Trainer", size: "1", brand: "elgato" },
+            { src: "", label: "next motif", size: "2", brand: "elgato" },
+            { src: "https://asdfgray.com/img/emote%20avi.png", label: "Emote", size: "half", brand: "elgato" },
+            { src: "https://asdfgray.com/img/cutesyhazel%20-preview.png", label: "CutesyHazel", size: "half", brand: "elgato" },
+        ];
+
+        function tile(item) {
+            const a = document.createElement("a");
+            a.className = "bento-tile " + (item.size === "2" ? "w-2" : "w-1") + (item.size === "half" ? " h-half" : "");
+            a.href = item.href || ("#brand-" + item.brand);
+            a.setAttribute("aria-label", item.label);
+            if (item.src) {
+                const img = document.createElement("img");
+                img.src = item.src;
+                img.alt = item.label;
+                img.loading = "lazy";
+                a.appendChild(img);
+                const cap = document.createElement("span");
+                cap.className = "bento-caption";
+                cap.textContent = item.label;
+                a.appendChild(cap);
+            } else {
+                a.classList.add("is-placeholder");
+                a.textContent = item.label;
+            }
+            return a;
+        }
+
+        function buildTrack(items) {
+            const track = document.createElement("div");
+            track.className = "bento-track";
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].size === "half" && items[i + 1] && items[i + 1].size === "half") {
+                    const stack = document.createElement("div");
+                    stack.className = "bento-stack";
+                    stack.appendChild(tile(items[i]));
+                    stack.appendChild(tile(items[i + 1]));
+                    track.appendChild(stack);
+                    i++;
+                } else {
+                    track.appendChild(tile(items[i]));
+                }
+            }
+            return track;
+        }
+
+        function buildRow(items, direction, duration) {
+            const row = document.createElement("div");
+            row.className = "bento-row " + direction;
+            row.style.setProperty("--dur", duration);
+            // Two identical tracks make the loop seamless.
+            row.appendChild(buildTrack(items));
+            row.appendChild(buildTrack(items).cloneNode(true));
+            return row;
+        }
+
+        const marquee = document.getElementById("bento-marquee");
+        const reversed = BENTO.slice().reverse();
+        marquee.appendChild(buildRow(BENTO, "to-left", "75s"));
+        marquee.appendChild(buildRow(reversed, "to-right", "90s"));
+
+        /* ---------- Brand switcher ----------
+           Clicking a logo scrolls to its section. The active logo follows the section in view. */
+        const links = document.querySelectorAll("#brand-switcher a[data-brand]");
+        const sections = document.querySelectorAll(".brand-section[data-brand]");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                const target = document.querySelector(link.getAttribute("href"));
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                history.replaceState(null, "", link.getAttribute("href"));
+            });
+        });
+
+        if ("IntersectionObserver" in window && sections.length > 1) {
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const brand = entry.target.dataset.brand;
+                    links.forEach(l => l.classList.toggle("is-active", l.dataset.brand === brand));
+                });
+            }, { rootMargin: "-40% 0px -50% 0px" });
+            sections.forEach(s => io.observe(s));
+        }
+    </script>
+</body>
+
+</html>

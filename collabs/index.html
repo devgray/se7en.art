@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>brand collabs - espresso for the soul</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport"
+        content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Yo! I do sub emotes, badges, avatars, twitch and youtube art, character pin-ups, cute stuff, hi lol.">
+        <meta name="keywords" content="emote commission, emote commissions, twitch emote commission, grei sub emotes commissions, sub emotes, commission, commissions, grei, greifx, art commission, youtube art, twitch art">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link href="../fontawesome-free-7.3.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+        <!-- BOOTSTRAP 4.4 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- AOS LIBRARY -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- CUSTOM STYLE -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet" type="text/css">
+        <script src="../scrollup.js"></script>
+        <script src="../projects/api.js"></script>
+        
+        <!-- COLLAB PAGE CSS/JS -->
+        <link href="../collabs/style.css" rel="stylesheet" type="text/css">
+
+        <script>
+        $(function() {
+        AOS.init();
+        });
+
+ 
+        </script>
+
+    </head>
+
+    <body>
+        <div class="container-fluid"> <!-- NAVBAR -->
+            <div class="row" id="header">
+                <div class="col-sm-12 text-center flex-column section-header">
+                    <h1>espresso for the soul</h1>
+                    <h5 class="nav">
+                            <ol id="nav-mobile">
+                                    <li><a href="../"><i class="fas fa-home"></i></a></li>
+                                    <li><a href="../collabs/" id="active"><i class="fa-solid fa-star"></i></a></li>
+                                    <li><a href="../projects/"><i class="fas fa-book"></i></a></li>
+                                    <!-- <li><a href="../icons/"><i class="far fa-user"></i></a></li> -->
+                                    <li><a href="../thanks/"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="../commissions/"><i class="fas fa-sticky-note"></i></a></li>
+                                    <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
+                                    <!-- <li><a href="../twitch/"><i class="fab fa-twitch"></i></a></li> -->
+                                    <li><a href="../about/"><i class="fas fa-question"></i></a></li>
+                            </ol>
+                            <ol id="nav-desktop">
+                                <li><a href="../">my works</a></li>
+                                <li><a href="../collabs/" id="active">brand collabs</a></li>
+                                <li><a href="../projects/">projects</a></li>
+                                <!-- <li><a href="../icons/">icons</a></li> -->
+                                <li><a href="../thanks/">thanks</a></li>
+                                <li><a href="../commissions/">commissions</a></li>
+                                <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
+                                <!-- <li><a href="../twitch/">twitch</a></li> -->
+                                <li><a href="../about/">about</a></li>
+                        </ol>
+                    </h5>
+            </div>
+            </div>
+        </div>
+
+        <!-- BRAND MARQUEE -->
+<div class="row">
+            <div class="col-sm-12 brand-bar">
+                <ul id="brand-switcher">
+                    <li>
+                        <a href="#brand-elgato" data-brand="elgato" class="is-active" title="Elgato">
+                            <!-- Drop the official logo file in img/brands/ and remove the fallback span. -->
+                            <img src="../img/brands/Elgato_Full_Logo_Black.svg" alt="Elgato" onerror="this.nextElementSibling.hidden=false; this.remove();">
+                            <span class="brand-fallback" hidden>Elgato</span>
+                        </a>
+                    </li>
+                    <!-- Next brand goes here:
+                    <li><a href="#brand-xyz" data-brand="xyz"><img src="img/brands/xyz.svg" alt="XYZ"></a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+
+<!-- Bento marquee. Tiles are filled from the BENTO array at the bottom of the page. -->
+        <div class="bento-wall" id="bento-wall" aria-label="Brand collab motifs">
+            <div class="bento-atmos" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
+            <div class="bento-lanes" id="bento-lanes"></div>
+            <div class="bento-edge left" aria-hidden="true"></div>
+            <div class="bento-edge right" aria-hidden="true"></div>
+        </div>
+
+
+
+
+
+        <div class="container">
+            <div class="row section-body">
+
+            </div>
+        </div> 
+
+        <!-- FOOTER LINKS -->
+        <div class="footer">
+            <div class="footer-links text-center">
+                <ol>
+                    <a href="https://www.tiktok.com/@greidraws/" target="_blank"><li><i class="fab fa-tiktok"></i></li></a>
+                    <a href="https://www.instagram.com/grei.draws/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="https://twitter.com/0xgrei" target="_blank"><li><i class="fab fa-twitter"></i></li></a>
+                    <a href="https://www.twitch.tv/grei" target="_blank"><li><i class="fab fa-twitch"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCQJ44JHlnt3OxFtvyOZgteA" target="_blank" hidden><li><i class="fab fa-youtube"></i></li></a>
+                </ol>
+                <small>Copyright &copy; 2016-2026 asdfgray.com. All Rights Reserved</small>
+            </div>
+        </div>
+
+    </body>
+
+    <style>
+        .brand-card{
+            padding: 20px;
+            border-radius: 1em;
+            border: 1px solid rgba(0, 0, 0, .025);
+        }
+        .brand-card:hover{
+            background: rgba(0, 0, 0, .025);
+        }
+        .brand-card h3{
+            margin-bottom:20px;
+        }
+        .brand-card img{
+            max-width: 100%;
+            height: auto;
+            margin-top:10px;
+            border-radius: 1em;
+        }
+        
+    </style>
+    <script>
+               
+/* ---------- Bento motifs ----------
+    Each entry becomes one tile. Fields:
+        src     image url (leave empty for a grey placeholder tile)
+        label   caption shown on hover
+        href    optional link, defaults to the brand section
+        size    "1" square, "2" wide, "half" half height (two halves are stacked automatically)
+        brand   which section the tile belongs to
+*/
+const BENTO = [
+    // The Thumb Dance gif is 24 MB, too heavy for the marquee. Use a still frame here once you have one.
+    { src: "../img/collabs/elgato halloween faceplate.jpg", label: "Custom Halloween Faceplate", size: "2", brand: "elgato" },
+    { src: "../img/collabs/elgato sticker a.jpg", label: "Product Stickers", size: "half", brand: "elgato" },
+    { src: "../img/collabs/elgato sticker b.jpg", label: "Product Stickers", size: "half", brand: "elgato" },
+    { src: "../img/collabs/elgato sticker c.jpg", label: "Product Stickers", size: "1", brand: "elgato" },
+   { src: "../img/animated/cat jump box.gif", label: "Thumb Dance Challenge", size: "1", brand: "elgato" },
+     
+    { src: "../img/collabs/elgato catdeck.jpg", label: "Cat Deck", size: "1", brand: "elgato" },
+    { src: "../img/collabs/my elgato setup.png", label: "Dream Elgato Setup", size: "2", brand: "elgato" },
+    { src: "https://asdfgray.com/img/emote%20avi.png", label: "Emote", size: "half", brand: "elgato" },
+    { src: "https://asdfgray.com/img/cutesyhazel%20-preview.png", label: "CutesyHazel", size: "half", brand: "elgato" },
+];
+
+function tile(item) {
+    const a = document.createElement("a");
+    a.className = "bento-tile " + (item.size === "2" ? "w-2" : "w-1") + (item.size === "half" ? " h-half" : "");
+    a.href = item.href || ("#brand-" + item.brand);
+    a.setAttribute("aria-label", item.label);
+    if (item.src) {
+        const img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.label;
+        img.loading = "lazy";
+        a.appendChild(img);
+        const cap = document.createElement("span");
+        cap.className = "bento-caption";
+        cap.textContent = item.label;
+        a.appendChild(cap);
+    } else {
+        a.classList.add("is-placeholder");
+        a.textContent = item.label;
+    }
+    return a;
+}
+
+function buildTrack(items) {
+    const track = document.createElement("div");
+    track.className = "bento-track";
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].size === "half" && items[i + 1] && items[i + 1].size === "half") {
+            const stack = document.createElement("div");
+            stack.className = "bento-stack";
+            stack.appendChild(tile(items[i]));
+            stack.appendChild(tile(items[i + 1]));
+            track.appendChild(stack);
+            i++;
+        } else {
+            track.appendChild(tile(items[i]));
+        }
+    }
+    return track;
+}
+
+function buildRow(items, direction, duration) {
+    const row = document.createElement("div");
+    row.className = "bento-row " + direction;
+    row.style.setProperty("--dur", duration);
+    // Two identical tracks make the loop seamless.
+    row.appendChild(buildTrack(items));
+    row.appendChild(buildTrack(items).cloneNode(true));
+    return row;
+}
+
+const marquee = document.getElementById("bento-wall");
+const reversed = BENTO.slice().reverse();
+marquee.appendChild(buildRow(BENTO, "to-left", "75s"));
+marquee.appendChild(buildRow(reversed, "to-right", "90s"));
+
+/* ---------- Brand switcher ----------
+    Clicking a logo scrolls to its section. The active logo follows the section in view. */
+const links = document.querySelectorAll("#brand-switcher a[data-brand]");
+const sections = document.querySelectorAll(".brand-section[data-brand]");
+
+links.forEach(link => {
+    link.addEventListener("click", e => {
+        const target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", link.getAttribute("href"));
+    });
+});
+
+if ("IntersectionObserver" in window && sections.length > 1) {
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const brand = entry.target.dataset.brand;
+            links.forEach(l => l.classList.toggle("is-active", l.dataset.brand === brand));
+        });
+    }, { rootMargin: "-40% 0px -50% 0px" });
+    sections.forEach(s => io.observe(s));
+}
+    </script>
+</html>

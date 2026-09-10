@@ -31,6 +31,11 @@ function popup(a){
     x.classList.remove('portrait');
     x.classList.remove('box');
     x.classList.add('landscape');
+  }else if(or == 2){
+    x.classList.remove('landscape');
+    x.classList.remove('portrait');
+    x.classList.remove('box');
+    x.classList.add('landscapeplus');
   }else{
     x.classList.remove('landscape');
     x.classList.remove('portrait');
@@ -39,8 +44,31 @@ function popup(a){
   document.getElementById("popup-img").src=a.src;
   document.getElementById("popup-title").innerHTML=a.title;
   document.getElementById("popup-desc").innerHTML=a.alt;
+  // document.getElementById("popup-label").innerHTML=a.label;
+  // a.setAttribute("aria-label", a.label);
   $('.modal').modal('show');
 }
+// function tile(item) {
+//         const a = document.createElement("a");
+//         a.className = "bento-tile " + (item.size === "2" ? "w-2" : "w-1") + (item.size === "half" ? " h-half" : "");
+//         a.href = item.href || ("#brand-" + item.brand);
+//         a.setAttribute("aria-label", item.label);
+//         if (item.src) {
+//             const img = document.createElement("img");
+//             img.src = item.src;
+//             img.alt = item.label;
+//             img.loading = "lazy";
+//             a.appendChild(img);
+//             const cap = document.createElement("span");
+//             cap.className = "bento-caption";
+//             cap.textContent = item.label;
+//             a.appendChild(cap);
+//         } else {
+//             a.classList.add("is-placeholder");
+//             a.textContent = item.label;
+//         }
+//         return a;
+//     }
 function fadeIn(a){
   
   op = 0.1;

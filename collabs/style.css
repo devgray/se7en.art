@@ -1,0 +1,208 @@
+
+/* ---------- Page specific styles. Everything else comes from style.css ---------- */
+
+html { scroll-behavior: smooth; }
+body { background: #fff; color: #000; overflow-x: hidden; }
+
+/* Brand switcher under the site header. One logo now, more later. */
+.brand-bar {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.brand-bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.brand-bar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    padding: 6px 4px 10px;
+    color: #000;
+    text-decoration: none;
+    opacity: .45;
+    filter: grayscale(1);
+    transition: opacity .25s ease, filter .25s ease;
+    border-bottom: solid 1px transparent;
+}
+.brand-bar a img { height: 100%; width: auto; display: block; }
+.brand-bar a span.brand-fallback {
+    font-family: ProductSansBold, Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 2.2em;
+    letter-spacing: -.02em;
+    line-height: 1;
+}
+.brand-bar a:hover,
+.brand-bar a:focus-visible,
+.brand-bar a.is-active {
+    opacity: 1;
+    filter: none;
+    border-bottom-color: #000;
+    outline: none;
+}
+
+/* Bento marquee. Rows alternate direction, tiles are desaturated until hovered. */
+.bento-wall {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden !important;
+    padding: 6px 0 20px;
+}
+.bento-row {
+    display: flex;
+    width: max-content;
+    gap: 12px;
+    padding: 6px 0;
+    will-change: transform;
+}
+.bento-row.to-left  { animation: bento-left  var(--dur, 70s) linear infinite; }
+.bento-row.to-right { animation: bento-right var(--dur, 70s) linear infinite; }
+.bento-wall:hover .bento-row { animation-play-state: paused; }
+.bento-track { display: flex; gap: 12px; }
+
+.bento-tile {
+    position: relative;
+    display: block;
+    height: 220px;
+    border-radius: 1em;
+    overflow: hidden;
+    background: #f3f3f3;
+    text-decoration: none;
+    color: #000;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+.bento-tile.w-1 { width: 220px; }
+.bento-tile.w-2 { width: 452px; }
+.bento-tile.h-half { height: 104px; }
+.bento-stack { display: flex; flex-direction: column; gap: 12px; flex: 0 0 auto; }
+
+.bento-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(1);
+    opacity: 1;
+    transform: scale(1.001);
+    transition: filter .35s ease, opacity .35s ease, transform .35s ease;
+}
+.bento-tile .bento-caption {
+    position: absolute;
+    left: 14px;
+    bottom: 12px;
+    font-size: .8em;
+    padding: 4px 12px;
+    border-radius: 10em;
+    background: rgba(26,26,26,.85);
+    color: #fff;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .3s ease, transform .3s ease;
+    white-space: nowrap;
+}
+/* edge blur + darkening: purely visual, no pointer events */
+        .bento-edge {
+            position: absolute; top: 0; bottom: 0; width: 16vw; z-index: 2; pointer-events: none;
+            /* height: 452px;
+            top: 356px; */
+            -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+            -webkit-mask-image: linear-gradient(90deg, #000, transparent);
+                    mask-image: linear-gradient(90deg, #000, transparent);
+            /* background: linear-gradient(90deg, rgba(20,16,40,.16), rgba(20,16,40,0)); */
+        }
+        .bento-edge.left  { left: 0; }
+        .bento-edge.right { right: 0; transform: scaleX(-1); }
+.bento-tile:hover img,
+.bento-tile:focus-visible img {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.03);
+}
+.bento-tile:hover .bento-caption,
+.bento-tile:focus-visible .bento-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+.bento-tile:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+
+/* Placeholder tiles for motifs that do not have an image yet */
+.bento-tile.is-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ededed;
+    color: #999;
+    font-size: .85em;
+}
+.bento-tile.is-placeholder:hover { background: #e2e2e2; color: #000; }
+
+@keyframes bento-left  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes bento-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+/* Brand sections. Same layout language as the projects page. */
+.brand-section { scroll-margin-top: 30px; margin-top: 80px; }
+.brand-section .brand-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+.brand-section .brand-title img { height: 36px; }
+.brand-section .brand-title h3 { margin: 0; }
+.brand-section .brand-intro {
+    max-width: 620px;
+    margin: 0 auto 40px;
+    opacity: .7;
+}
+.collab-card { margin-bottom: 30px; }
+.collab-card .img-wrap { padding: 0; }
+.collab-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1em;
+    filter: grayscale(1);
+    transition: filter .3s ease, transform .3s ease;
+}
+.collab-card:hover img { filter: none; transform: translateY(-2px); }
+.collab-card h4 { font-size: 1.15em; text-align: left; margin: 14px 0 4px; }
+.collab-card p { font-size: 1em; text-align: left; opacity: .75; }
+.collab-card p a { color: #000; font-family: ProductSansBold, Montserrat, sans-serif; }
+.collab-tag {
+    display: inline-block;
+    font-size: .75em;
+    padding: 3px 10px;
+    border-radius: 10em;
+    background: #1a1a1a;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.site-footer { margin-top: 60px; }
+
+@media (prefers-reduced-motion: reduce) {
+    .bento-row { animation: none !important; }
+    .bento-wall { overflow-x: auto; }
+}
+@media (max-width: 768px) {
+    .bento-tile { height: 160px; }
+    .bento-tile.w-1 { width: 160px; }
+    .bento-tile.w-2 { width: 332px; }
+    .bento-tile.h-half { height: 74px; }
+    .brand-bar a { height: 48px; }
+    .brand-section { margin-top: 50px; }
+}
+@media (max-width: 480px) {
+    .brand-bar ul { gap: 6px 28px; }
+    .brand-section .brand-title { flex-direction: column; gap: 8px; }
+}
