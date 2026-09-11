@@ -112,43 +112,64 @@
                         </div>
                     </div>
 
+                
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
                 <!-- Moment 2: framed image + text, right -->
-                <div class="col-sm-6 offset-sm-6 moment-section">
+                <div class="col-xl-6 moment-section">
                     <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#8b6cff; --f2:#2fd3c7;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
                         <div class="frame">
                             <span class="pin" aria-hidden="true"></span>
-                            <img src="https://asdfgray.com/img/Squirrel%20Deck%20preview.png" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
+                            <img src="../img/collabs/elgato catdeck.jpg" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
                         </div>
                         <div class="text-panel">
+                            <span class="collab-tag teal">custom</span>
                             <span class="collab-tag teal">stream deck</span>
-                            <h4>Squirrel Deck</h4>
-                            <p>Custom key art for Stream Deck. Every key gets its own tiny scene, so the whole deck reads like one illustration.</p>
-                            <p>Gift art for <a href="https://twitch.tv/Sleepyrisu" target="_blank" rel="noopener">Sleepyrisu</a>. Replace this copy with the final text when ready.</p>
+                            <h4>Cat Deck</h4>
+                            <p>Custom Stream Deck faceplate designed for Spiritendo. Much amaze, much wao at how cute this turned out.
+                            </p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row section-body">
-                <div class="col-sm-6 offset-sm-2 moment-section" >
+                <div class="col-xl-6 moment-section" >
                     <!-- Moment 3: final reveal, left -->
-                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ff7a6e; --f2:#ffc857;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#8b6cff; --f2:#ffa8f1;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
                         <div class="frame">
                             <span class="pin" aria-hidden="true"></span>
                             <img src="https://asdfgray.com/img/animated/elgato%20thumb%20dance.gif" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
                         </div>
                         <div class="text-panel">
                             <span class="collab-tag violet">animation</span>
-                            <h4>Thumb Dance Challenge</h4>
+                            <span class="collab-tag violet">short loop</span>
+                            <h4>Thumb Dance Challenge Trend</h4>
                             <p>A short loop made for <a href="https://www.tiktok.com/@elgato_de/video/7571399037987884310" target="_blank" rel="noopener">ElgatoDE</a> on TikTok.</p>
-                            <p>Code <b>grei</b> gets you 5% off at <a href="https://elgato.sjv.io/grei" target="_blank" rel="noopener">elgato.com</a>.</p>
+                            <p>Started as a fun personal project, but Alex said "miu miu let us pay" and i was like "ye okay".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 moment-section" >
+                    <!-- Moment 3: final reveal, left -->
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ff7a6e; --f2:#ffc857;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato halloween faceplate.jpg" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag amber">custom</span>
+                            <span class="collab-tag amber">stream deck</span>
+                            <h4>Halloween 2025</h4>
+                            <p>Limited faceplate design that was only available for 2025 Halloween giveaway.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+        </div>    
 
             
-        </div>
+        
             
 
         <!-- ===================== 4. CTA ===================== -->
@@ -407,8 +428,7 @@ if ("IntersectionObserver" in window && sections.length > 1) {
            2. White chapter transition. A white disc scales up with scroll progress.
            ===================================================================== */
         .chapter-transition {
-            position: relative; height: 30vh; margin-top: -100px; margin-bottom: 50px;
-            width: 100vw; margin-left: calc(50% - 50vw);
+            position: relative; height: 30vh; margin-top: -150px;
             overflow: hidden; z-index: 3; pointer-events: none;
         }
         .chapter-transition .bloom {
@@ -505,7 +525,7 @@ if ("IntersectionObserver" in window && sections.length > 1) {
         .site-footer { margin-top: 40px; }
 
         /* moments 2 and 3: framed image + text panel */
-        .moment-card { width:700px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 0; align-items: center;}
+        .moment-card { max-width:1000px; margin:auto; margin-top:10px; display: grid; grid-template-columns: .7fr .8fr; gap: 0; align-items: center;}
         /* .moment-card.left { grid-template-columns: .9fr 1.1fr; }
         .moment-card.third { top: 66%; } */
         .frame {
@@ -546,6 +566,13 @@ if ("IntersectionObserver" in window && sections.length > 1) {
         }
         .collab-tag.teal { background: var(--c-teal); color: #062a27; }
         .collab-tag.violet { background: var(--c-violet); }
+        .collab-tag.coral { background: var(--c-coral); color: #062a27; }
+        .collab-tag.amber { background: var(--c-amber); color: #062a27;}
+        .collab-tag.sky { background: var(--c-sky); }
+        .collab-tag.ink { background: var(--c-ink); }
 
+        @media (min-width: 768px) {
+        .frame {}
+        }
     </style>
 </html>
