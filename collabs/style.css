@@ -112,15 +112,15 @@ body { background: #fff; color: #000; overflow-x: hidden; }
 /* edge blur + darkening: purely visual, no pointer events */
         .bento-edge {
             position: absolute; top: 0; bottom: 0; width: 16vw; z-index: 2; pointer-events: none;
-            /* height: 452px;
-            top: 356px; */
+            height: 120vh;
+            top: 356px;
             -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
             -webkit-mask-image: linear-gradient(90deg, #000, transparent);
                     mask-image: linear-gradient(90deg, #000, transparent);
             /* background: linear-gradient(90deg, rgba(20,16,40,.16), rgba(20,16,40,0)); */
         }
         .bento-edge.left  { left: 0; }
-        .bento-edge.right { right: 0; transform: scaleX(-1); }
+        .bento-edge.right { right: -8px; transform: scaleX(-1); }
 .bento-tile:hover img,
 .bento-tile:focus-visible img {
     filter: none;
@@ -189,6 +189,31 @@ body { background: #fff; color: #000; overflow-x: hidden; }
 }
 
 .site-footer { margin-top: 60px; }
+    /* =====================================================================
+    2. White chapter transition. A white disc scales up with scroll progress.
+    ===================================================================== */
+.chapter-transition {
+    position: relative; height: 60vh; margin-top: -120px;
+    width: 100vw; margin-left: calc(50% - 50vw);
+    overflow: hidden; z-index: 3; pointer-events: none;
+}
+.chapter-transition .bloom {
+    position: absolute; left: 50%; top: 100%;
+    width: 200vmax; height: 200vmax; margin-left: -100vmax; margin-top: -100vmax;
+    border-radius: 50%; background: #fff;
+    transform: scale(0); transform-origin: center;
+    box-shadow: 0 0 120px 60px rgba(255,255,255,.9);
+    will-change: transform;
+}
+.chapter-transition .chapter-label {
+    position: absolute; left: 0; right: 0; bottom: 8vh; text-align: center;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.chapter-transition.is-open .chapter-label { opacity: 1; transform: translateY(0); }
+.chapter-label h3 { font-size: 2.4em; margin: 0; }
+.chapter-label p { opacity: .6; margin: 6px 0 0; padding: 0; font-size: 1.05em; }
+
 
 @media (prefers-reduced-motion: reduce) {
     .bento-row { animation: none !important; }
