@@ -238,6 +238,7 @@ p{
     padding:15px;
     color:white;
     background:#09d0d0;
+    z-index: 99;
 }
 
 @media (max-width:1024px){

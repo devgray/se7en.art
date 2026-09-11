@@ -28,6 +28,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
         <link href="../style.css" rel="stylesheet" type="text/css">
         <script src="../projects/api.js"></script>
+        <script src="../scrollup.js"></script>
         
         <!-- COLLAB PAGE CSS/JS -->
         <link href="../collabs/style.css" rel="stylesheet" type="text/css">
@@ -115,11 +116,11 @@
                 
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <!-- Moment 2: framed image + text, right -->
-                <div class="col-xl-6 moment-section">
-                    <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#8b6cff; --f2:#2fd3c7;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                <div class="col-xl-4 offset-xl-2 moment-section">
+                    <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#e7e3f7; --f2:#f8e8b1;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
                         <div class="frame">
                             <span class="pin" aria-hidden="true"></span>
                             <img src="../img/collabs/elgato catdeck.jpg" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
@@ -134,9 +135,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 moment-section" >
+                <div class="col-xl-4 moment-section" >
                     <!-- Moment 3: final reveal, left -->
-                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#8b6cff; --f2:#ffa8f1;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#e5e2f1; --f2:#c9a8ff;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
                         <div class="frame">
                             <span class="pin" aria-hidden="true"></span>
                             <img src="https://asdfgray.com/img/animated/elgato%20thumb%20dance.gif" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
@@ -150,9 +151,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 moment-section" >
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-xl-4 offset-xl-2 moment-section" >
                     <!-- Moment 3: final reveal, left -->
-                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ff7a6e; --f2:#ffc857;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ffeeec; --f2:#ff7057;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
                         <div class="frame">
                             <span class="pin" aria-hidden="true"></span>
                             <img src="../img/collabs/elgato halloween faceplate.jpg" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
@@ -162,6 +166,21 @@
                             <span class="collab-tag amber">stream deck</span>
                             <h4>Halloween 2025</h4>
                             <p>Limited faceplate design that was only available for 2025 Halloween giveaway.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 moment-section">
+                    <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#f0edf8; --f2:#2fd3c7;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato sticker b.jpg" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag ink">prints</span>
+                            <h4>Sticker Pack</h4>
+                            <p>Product stickers that were given away at Gamescom 2026.
+                            </p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -203,6 +222,8 @@
             </div>
         </section>
 
+        
+
         <!-- FOOTER LINKS -->
         <div class="footer">
             <div class="footer-links text-center">
@@ -216,6 +237,8 @@
                 <small>Copyright &copy; 2016-2026 asdfgray.com. All Rights Reserved</small>
             </div>
         </div>
+
+        <div onclick="topFunction()" id="myBtn" title="Go to top" style="display:none;"><div class="d-flex flex-column justify-content-center text-center"><i class="fas fa-angle-up fa-lg m-auto"></i></div></div>
 
     </body>
 
