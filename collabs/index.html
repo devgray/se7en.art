@@ -97,8 +97,9 @@
         <!-- BRAND MARQUEE -->
         <div class="sticky-sentinel"></div>
         <div class="row sticky-nav">
-            <div class="col-sm-12 brand-bar">
+            <div class="col-sm-12 brand-bar" id="brand-bar">
                 <ul id="brand-switcher">
+                    <li id="brand-bc" style="display: none;"><a href="#">brand collabs /</a></li>
                     <li>
                         <a href="#brand-elgato" data-brand="elgato" class="brand-item is-active" title="Elgato">
                             <!-- Drop the official logo file in img/brands/ and remove the fallback span. -->
@@ -327,11 +328,6 @@
             margin-top:10px;
             border-radius: 1em;
         }
-        .letter {
-  display: inline-block;
-  white-space: pre; 
-  opacity: 0;       
-}
         
     </style>
     <script>
@@ -574,8 +570,10 @@ if (targetSection) {
             // If the sentinel is NOT visible, the nav is sticking to the top
             if (!entry.isIntersecting) {
             nav.classList.add('is-sticky');
+            document.querySelector('#brand-bc').style.display = 'inline';
             } else {
             nav.classList.remove('is-sticky');
+            document.querySelector('#brand-bc').style.display = 'none';
             }
         });
         }, {
