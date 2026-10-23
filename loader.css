@@ -1,0 +1,5 @@
+.letter {
+  display: inline-block;
+  white-space: pre; /* Preserves spaces between words */
+  opacity: 0;       /* Starts hidden */
+}
