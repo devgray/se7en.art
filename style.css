@@ -18,17 +18,17 @@
   /* width: 100vw; */
   height: 100vh;
   background-color: #ffffff; /* Or any background color you prefer */
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999999;
 }
 #page-loader span{
-    font-size:1.2em;
+    font-size:1.1em;
 }
 
 #page-loader img {
-  width: 200px; /* Adjust size of your GIF */
+  width: 300px; /* Adjust size of your GIF */
   height: auto;
 }
 
