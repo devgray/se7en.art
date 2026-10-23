@@ -15,10 +15,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   background-color: #ffffff; /* Or any background color you prefer */
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   z-index: 999999;

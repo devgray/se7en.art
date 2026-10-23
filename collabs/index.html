@@ -47,19 +47,38 @@
         loader.style.display = 'none';
         loader.remove();
         });
+
+       
         </script>
+        <style>
+            .letter {
+  display: inline-block;
+  white-space: pre; /* Preserves spaces between words */
+  opacity: 0;       /* Starts hidden */
+}
+        </style>
 
     </head>
 
     <body>
-        <div id="page-loader">
-            <div class="flex-column justify-content-center text-center">
-                <img src="../img/animated/loading.gif" alt="Loading..." /><hr>
+
+        <div class="container-fluid" id="page-loader">
+            <div class="row">
+                        <div class="col-sm-12 text-center flex-column section-header">
+                                <h1 id="text-container"></h1>
+                        </div>
+                    </div>
+            <div class="contrainer-fluid">
+            <div class="flex-column justify-content-center text-center" style="margin-top:20vh;">
+                <img src="../img/animated/loading.gif" alt="Loading..." /><br>
                 <span>catto "working hard" to load images</span>
             </div>
+            </div>
         </div>
+
         
         
+<div id="page-content" style="display: none;"><!-- PAGE CONTENT -->        
 
         <div class="container-fluid"> <!-- NAVBAR -->
             <div class="row" id="header">
@@ -93,7 +112,7 @@
             </div>
         </div>
 
-<div id="page-content" style="display: none;"><!-- PAGE CONTENT -->
+
         <!-- BRAND MARQUEE -->
         <div class="sticky-sentinel"></div>
         <div class="row sticky-nav">
@@ -287,7 +306,7 @@
             </div>
         </section>
 
-</div><!-- end of page-content -->     
+ 
 
         <!-- FOOTER LINKS -->
         <div class="footer">
@@ -306,7 +325,7 @@
         <div onclick="topFunction()" id="myBtn" title="Go to top" style="display:none;"><div class="d-flex flex-column justify-content-center text-center"><i class="fas fa-angle-up fa-lg m-auto"></i></div></div>
 
     
-    
+</div><!-- end of page-content -->        
 </body>
 
     <style>
@@ -578,6 +597,61 @@ if (targetSection) {
         });
 
         observer.observe(sentinel);
+
+
+        const container = document.getElementById("text-container");
+const text = "espresso for the soul";
+
+// 1. Split text into individual letters wrapped in spans
+container.innerHTML = text
+  .split("")
+  .map(letter => `<span class="letter">${letter}</span>`)
+  .join("");
+
+const letters = container.querySelectorAll(".letter");
+const staggerDelay = 150;    // Slightly faster stagger for a snappier feel
+const letterDuration = 500; // Total duration of the bounce bounce action
+const holdTime = 2000;      // How long the phrase stays visible
+
+function startLoop() {
+  let finalLetterFinished = 0;
+
+  letters.forEach((letter, index) => {
+    const entryFinishTime = (index * staggerDelay) + letterDuration;
+    finalLetterFinished = Math.max(finalLetterFinished, entryFinishTime);
+
+    // Animate letter in with a physics-defying bounce curve
+    letter.animate(
+      [
+        { opacity: 0, transform: "scale(0.1) translateY(-40px)" }, // Drop down from above, very small
+        { opacity: 1, transform: "scale(1) translateY(0)" }       // Land at normal size and position
+      ],
+      {
+        duration: letterDuration,
+        delay: index * staggerDelay,
+        // This cubic-bezier creates the dramatic overshoot/elastic bounce back
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        fill: "forwards"
+      }
+    );
+  });
+
+  // Wait for the animation sequence to finish + hold time, then hard reset
+  setTimeout(() => {
+    letters.forEach(letter => {
+      letter.style.opacity = "0"; 
+    });
+    startLoop(); 
+  }, finalLetterFinished + holdTime);
+}
+
+// Start the playful bounce loop
+startLoop();
+
+
+
+
+
     </script>
     <style>
          /* =====================================================================
