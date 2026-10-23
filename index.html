@@ -37,9 +37,22 @@
             $(function() {
             AOS.init();
             });
+            
             </script>
 
         <script>
+        window.addEventListener('load', function() {
+        const loader = document.getElementById('page-loader');
+        const content = document.getElementById('page-content');
+
+        // Show main content
+        content.style.display = 'block';
+
+        // Hide or remove the loader
+        loader.style.display = 'none';
+        // Optional: loader.remove();
+        });
+
             function shush(){
             window.open("https://youtu.be/dQw4w9WgXcQ?si=3R7wyHyF7wggZCEN", "_blank");
             }
@@ -70,6 +83,11 @@
     </head>
     
     <body>
+        <!-- <div id="page-loader">
+        <img src="../img/animated/loading.gif" alt="Loading..." />
+        </div> -->
+        
+        
         <div class="overlay-img" onclick=shush()><img class="img-fluid pixel-cat" src="img/pixel-cat-2.gif"><div class="bubbleset"><div class="hoverCard" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">- shush</div><span class="bubble"></span></div></div>
         <div class="container-fluid">
                 <div class="row" id="header">
@@ -168,6 +186,8 @@
             <div class="img-loader text-center mt-5" hidden>
                 <p>Loading...</p>
             </div>
+
+            <!-- <div id="page-content" style="display: none;" > -->
             <div class="row image-thumbnails">
 <!-- ROW 1 -->
 <!-- LINK <a href='https://twitch.tv/' target='_blank'></a> -->
@@ -231,6 +251,8 @@
                 </div>
 
             </div><!-- END OF IMAGE THUMBNAILS-->
+            <!-- </div> -->
+            
         </div>
         <div onclick="topFunction()" id="myBtn" title="Go to top" style="display:none;"><div class="d-flex flex-column justify-content-center text-center"><i class="fas fa-angle-up fa-lg m-auto"></i></div></div>
         
@@ -258,5 +280,6 @@
             </div>
         </div>
 
+    
     </body>
 </html>

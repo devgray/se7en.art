@@ -11,6 +11,27 @@
     padding:0;
     /* line-height:2.5em; */
 }
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* Or any background color you prefer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+#page-loader span{
+    font-size:1.2em;
+}
+
+#page-loader img {
+  width: 200px; /* Adjust size of your GIF */
+  height: auto;
+}
+
 .ads-footer{
     background-color: rgba(0,0,0,.05);
     margin-top:50px;
