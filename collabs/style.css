@@ -4,17 +4,57 @@
 html { scroll-behavior: smooth; }
 body { background: #fff; color: #000; overflow-x: hidden; }
 
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* Or any background color you prefer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+#page-loader img {
+  width: 80px; /* Adjust size of your GIF */
+  height: auto;
+}
+
 /* Brand switcher under the site header. One logo now, more later. */
 .brand-bar {
-    margin-top: 10px;
     margin-bottom: 40px;
+    background: #fff;
+}
+.sticky-nav{
+    top:0;
+    z-index: 100;
+    position: sticky !important;
+    
+}
+.sticky-nav .brand-bar li {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.is-sticky .brand-bar li {
+  
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+.is-sticky .brand-bar ul {
+    gap: 10px 0px;
+}
+#brand-switcher li{
+    margin: 0;
+    padding: 0;
 }
 .brand-bar ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px 50px;
+    gap: 10px 40px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -27,9 +67,9 @@ body { background: #fff; color: #000; overflow-x: hidden; }
     padding: 6px 4px 10px;
     color: #000;
     text-decoration: none;
-    opacity: .45;
-    filter: grayscale(1);
-    transition: opacity .25s ease, filter .25s ease;
+    opacity: .5;
+    /* filter: grayscale(1); */
+    /* transition: opacity .25s ease, filter .25s ease; */
     border-bottom: solid 1px transparent;
 }
 .brand-bar a img { height: 100%; width: auto; display: block; }
@@ -149,7 +189,8 @@ body { background: #fff; color: #000; overflow-x: hidden; }
 @keyframes bento-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 
 /* Brand sections. Same layout language as the projects page. */
-.brand-section { scroll-margin-top: 30px; margin-top: 80px; }
+/* .brand-section { scroll-margin-top: 30px; margin-top: 80px; } */
+.brand-section { min-height: 100vh; }
 .brand-section .brand-title {
     display: flex;
     align-items: center;
@@ -213,6 +254,12 @@ body { background: #fff; color: #000; overflow-x: hidden; }
 .chapter-transition.is-open .chapter-label { opacity: 1; transform: translateY(0); }
 .chapter-label h3 { font-size: 2.4em; margin: 0; }
 .chapter-label p { opacity: .6; margin: 6px 0 0; padding: 0; font-size: 1.05em; }
+
+.sticky-element {
+  position: sticky !important;
+  top: 0; /* Required: tells the element where to sit when it sticks */
+  z-index: 100; /* Optional: keeps it on top of other overlapping content */
+}
 
 
 @media (prefers-reduced-motion: reduce) {

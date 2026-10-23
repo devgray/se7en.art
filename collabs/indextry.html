@@ -406,9 +406,9 @@
                             <span class="brand-fallback" hidden>elgato</span>
                         </a>
                     </li>
-                    <!-- Next brand goes here:
+                    Next brand goes here:
                     <li><a href="#brand-xyz" data-brand="xyz"><img src="img/brands/xyz.svg" alt="XYZ"></a></li>
-                    -->
+                   
                 </ul>
             </div>
         </div>
@@ -498,6 +498,69 @@
         <!-- ===================== NEXT BRAND (template) =====================
         Copy the vine section, change id to brand-xyz and data-brand to xyz, swap images and copy.
         ================================================================== -->
+        <section class="vine-section brand-section" id="brand-xyz" data-brand="xyz">
+            <svg class="vine-svg" viewBox="0 0 1000 3400" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#2fd3c7"/>
+                        <stop offset="1" stop-color="#5fb4ff"/>
+                    </linearGradient>
+                </defs>
+                <!-- Main vine. Starts top centre, swings left, right, left, then ends. -->
+                <path id="vine-main" class="vine-main"
+                      d="M500 0 C 540 140, 330 230, 250 420 S 300 720, 520 860 S 830 1090, 790 1330 S 620 1660, 430 1900 S 200 2140, 240 2330 S 400 2660, 520 2860 S 470 3120, 440 3280"/>
+                <g id="vine-decor"></g>
+                <g id="vine-tips">
+                    <circle class="vine-tip" cx="440" cy="3280" r="5"/>
+                    <circle class="vine-tip" cx="452" cy="3298" r="3"/>
+                    <circle class="vine-tip" cx="428" cy="3300" r="2"/>
+                </g>
+            </svg>
+
+            <!-- Moment 1: logo on a leaf, upper left -->
+            <div class="moment moment-logo left" data-at="0.13">
+                <div class="leaf-stage">
+                    <svg viewBox="0 0 520 360" aria-hidden="true">
+                        <path class="leaf-shape" d="M510 180 C 430 20, 200 0, 40 110 C 0 150, 0 210, 40 250 C 200 360, 430 340, 510 180 Z"/>
+                        <path d="M505 182 C 380 175, 200 190, 60 178" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <div class="leaf-logo">
+                        <!-- Official Elgato logo file goes here (white version works best on the leaf). -->
+                        <img src="img/brands/elgato-white.svg" alt="Elgato" onerror="this.nextElementSibling.hidden=false; this.remove();">
+                        <span class="brand-fallback" hidden>elgato</span>
+                    </div>
+                </div>
+                <p class="moment-note">Where this collab started: emotes, key art and small animations for the Elgato community in Germany.</p>
+            </div>
+
+            <!-- Moment 2: framed image + text, right -->
+            <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#8b6cff; --f2:#2fd3c7;">
+                <div class="frame">
+                    <span class="pin" aria-hidden="true"></span>
+                    <img src="https://asdfgray.com/img/Squirrel%20Deck%20preview.png" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
+                </div>
+                <div class="text-panel">
+                    <span class="collab-tag teal">stream deck</span>
+                    <h4>Squirrel Deck</h4>
+                    <p>Custom key art for Stream Deck. Every key gets its own tiny scene, so the whole deck reads like one illustration.</p>
+                    <p>Gift art for <a href="https://twitch.tv/Sleepyrisu" target="_blank" rel="noopener">Sleepyrisu</a>. Replace this copy with the final text when ready.</p>
+                </div>
+            </div>
+
+            <!-- Moment 3: final reveal, left -->
+            <div class="moment moment-card left third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ff7a6e; --f2:#ffc857;">
+                <div class="frame">
+                    <span class="pin" aria-hidden="true"></span>
+                    <img src="https://asdfgray.com/img/animated/elgato%20thumb%20dance.gif" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
+                </div>
+                <div class="text-panel">
+                    <span class="collab-tag violet">animation</span>
+                    <h4>Thumb Dance Challenge</h4>
+                    <p>A short loop made for <a href="https://www.tiktok.com/@elgato_de/video/7571399037987884310" target="_blank" rel="noopener">ElgatoDE</a> on TikTok.</p>
+                    <p>Code <b>grei</b> gets you 5% off at <a href="https://elgato.sjv.io/grei" target="_blank" rel="noopener">elgato.com</a>.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- ===================== 4. CTA ===================== -->
         <div class="cta-transition" aria-hidden="true"></div>
