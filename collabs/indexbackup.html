@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>brand collabs - espresso for the soul</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport"
+        content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Yo! I do sub emotes, badges, avatars, twitch and youtube art, character pin-ups, cute stuff, hi lol.">
+        <meta name="keywords" content="emote commission, emote commissions, twitch emote commission, grei sub emotes commissions, sub emotes, commission, commissions, grei, greifx, art commission, youtube art, twitch art">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link href="../fontawesome-free-7.3.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+        <!-- BOOTSTRAP 4.4 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- AOS LIBRARY -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- CUSTOM STYLE -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet" type="text/css">
+        <link href="../loader.css" rel="stylesheet" type="text/css">
+        <script src="../projects/api.js"></script>
+        <script src="../scrollup.js"></script>
+        
+        <!-- COLLAB PAGE CSS/JS -->
+        <link href="../collabs/style.css" rel="stylesheet" type="text/css">
+
+        <script>
+        $(function() {
+        AOS.init();
+        });
+
+        </script>
+        <style>
+            
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container-fluid" id="page-loader">
+            <div class="contrainer-fluid">
+            <div class="flex-column justify-content-center text-center" style="margin:auto;">
+                <img src="../img/animated/loading.gif" alt="Loading..." /><br>
+                <span id="text-container"></span>
+            </div>
+            </div>
+        </div>
+
+        
+        
+<div id="page-content" style="display: none;"><!-- PAGE CONTENT -->        
+
+        <div class="container-fluid"> <!-- NAVBAR -->
+            <div class="row" id="header">
+                <div class="col-sm-12 text-center flex-column section-header">
+                    <h1>espresso for the soul</h1>
+                    <h5 class="nav">
+                            <ol id="nav-mobile">
+                                    <li><a href="../"><i class="fas fa-home"></i></a></li>
+                                    <li><a href="../collabs/" id="active"><i class="fa-solid fa-star"></i></a></li>
+                                    <li><a href="../projects/"><i class="fas fa-book"></i></a></li>
+                                    <!-- <li><a href="../icons/"><i class="far fa-user"></i></a></li> -->
+                                    <li><a href="../thanks/"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="../commissions/"><i class="fas fa-sticky-note"></i></a></li>
+                                    <!-- <li><a href="/streamers/"><i class="fas fa-gamepad"></i></a></li> -->
+                                    <!-- <li><a href="../twitch/"><i class="fab fa-twitch"></i></a></li> -->
+                                    <li><a href="../about/"><i class="fas fa-question"></i></a></li>
+                            </ol>
+                            <ol id="nav-desktop">
+                                <li><a href="../">my works</a></li>
+                                <li><a href="../collabs/" id="active">brand collabs</a></li>
+                                <li><a href="../projects/">projects</a></li>
+                                <!-- <li><a href="../icons/">icons</a></li> -->
+                                <li><a href="../thanks/">thanks</a></li>
+                                <li><a href="../commissions/">commissions</a></li>
+                                <!-- <li></li><a href="/streamers/">STREAMER LIST</a></li> -->
+                                <!-- <li><a href="../twitch/">twitch</a></li> -->
+                                <li><a href="../about/">about</a></li>
+                        </ol>
+                    </h5>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- BRAND MARQUEE -->
+        <div class="sticky-sentinel"></div>
+        <div class="row sticky-nav">
+            <div class="col-sm-12 brand-bar" id="brand-bar">
+                <ul id="brand-switcher">
+                    <li id="brand-bc" style="display: none;"><a href="#">brand collabs /</a></li>
+                    <li>
+                        <a href="#brand-elgato" data-brand="elgato" class="brand-item is-active" title="Elgato">
+                            <!-- Drop the official logo file in img/brands/ and remove the fallback span. -->
+                            <img src="../img/brands/Elgato_Full_Logo_Black.svg" alt="Elgato" onerror="this.nextElementSibling.hidden=false; this.remove();">
+                            <span class="brand-fallback" hidden>Elgato</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#brand-corsair" data-brand="corsair" class="brand-item" title="Corsair">
+                            <!-- Drop the official logo file in img/brands/ and remove the fallback span. -->
+                            <img src="../img/brands/Corsair_Full_Logo_Black.svg" alt="Corsair" onerror="this.nextElementSibling.hidden=false; this.remove();">
+                            <span class="brand-fallback" hidden>Corsair</span>
+                        </a>
+                    </li>
+                    <!-- Next brand goes here:
+                    <li><a href="#brand-xyz" data-brand="xyz"><img src="img/brands/xyz.svg" alt="XYZ"></a></li>
+                    -->
+                </ul>
+            </div>
+            <!-- An empty sentinel element placed right above the nav to detect scrolling -->
+            
+        </div>
+
+    <!-- Bento marquee. Tiles are filled from the BENTO array at the bottom of the page. -->
+        <div class="bento-wall" id="bento-wall" aria-label="Brand collab motifs">
+            <div class="bento-atmos" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
+            <div class="bento-lanes" id="bento-lanes"></div>
+            <div class="bento-edge left" aria-hidden="true"></div>
+            <div class="bento-edge right" aria-hidden="true"></div>
+        </div>
+        
+    <section class="brand-section" id="brand-elgato" data-brand="elgato">
+        <div class="container-fluid" data-brand="elgato">
+            <div class="row"><div class="container chapter-label text-center" style="padding-top:10vh; padding-bottom:5vh;">
+                            <h3>Elgato</h3>
+                            <p>Animations, emotes and Stream Deck key art made together with the Elgato team in Germany.</p>
+            </div></div>
+            <div class="row">
+                <!-- Moment 2: framed image + text, right -->
+                <div class="col-xl-4 offset-xl-2 moment-section">
+                    <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#e7e3f7; --f2:#f8e8b1;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato catdeck.jpg" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag teal">custom</span>
+                            <span class="collab-tag teal">stream deck</span>
+                            <h4>Cat Deck</h4>
+                            <p>Custom Stream Deck faceplate designed for Spiritendo. Much amaze, much wao at how cute this turned out.
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 moment-section" >
+                    <!-- Moment 3: final reveal, left -->
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#e5e2f1; --f2:#c9a8ff;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="https://asdfgray.com/img/animated/elgato%20thumb%20dance.gif" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag violet">animation</span>
+                            <span class="collab-tag violet">short loop</span>
+                            <h4>Thumb Dance Challenge Trend</h4>
+                            <p>A short loop made for <a href="https://www.tiktok.com/@elgato_de/video/7571399037987884310" target="_blank" rel="noopener">ElgatoDE</a> on TikTok.</p>
+                            <p>Started as a fun personal project, but Alex said "miu miu let us pay" and i was like "ye okay".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-xl-4 offset-xl-2 moment-section" >
+                    <!-- Moment 3: final reveal, left -->
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ffeeec; --f2:#ff7057;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato halloween faceplate.jpg" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag amber">custom</span>
+                            <span class="collab-tag amber">stream deck</span>
+                            <h4>Halloween 2025</h4>
+                            <p>Limited faceplate design that was only available for 2025 Halloween giveaway.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 moment-section">
+                    <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#f0edf8; --f2:#2fd3c7;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato sticker b.jpg" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag ink">prints</span>
+                            <h4>Sticker Pack</h4>
+                            <p>Product stickers that were given away at Gamescom 2026.
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="brand-section" data-brand="corsair" id="brand-corsair">
+        <div class="container-fluid" data-brand="corsair">
+            <div class="row"><div class="container chapter-label text-center" style="padding-top:10vh; padding-bottom:5vh;">
+                            <h3>Corsair</h3>
+                            <p>Animations, emotes and Stream Deck key art made together with the Corsair team in Germany.</p>
+            </div></div>
+        </div>
+        <div class="container-fluid">
+            
+
+            <div class="row mt-5">
+                <div class="col-xl-4 offset-xl-2 moment-section" >
+                    <!-- Moment 3: final reveal, left -->
+                    <div class="moment moment-card third" data-at="0.69" style="--rot:3deg; --prot:-1.5deg; --f1:#ffeeec; --f2:#ff7057;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato halloween faceplate.jpg" alt="Thumb Dance Challenge animation for ElgatoDE" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag amber">custom</span>
+                            <span class="collab-tag amber">stream deck</span>
+                            <h4>Halloween 2025</h4>
+                            <p>Limited faceplate design that was only available for 2025 Halloween giveaway.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 moment-section">
+                    <div class="moment moment-card right" data-at="0.40" style="--rot:-4deg; --prot:1.5deg; --f1:#f0edf8; --f2:#2fd3c7;" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <div class="frame">
+                            <span class="pin" aria-hidden="true"></span>
+                            <img src="../img/collabs/elgato sticker b.jpg" alt="Squirrel Deck, Stream Deck key art" loading="lazy">
+                        </div>
+                        <div class="text-panel">
+                            <span class="collab-tag ink">prints</span>
+                            <h4>Sticker Pack</h4>
+                            <p>Product stickers that were given away at Gamescom 2026.
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            
+        
+            
+
+        <!-- ===================== 4. CTA ===================== -->
+        <div class="cta-transition" aria-hidden="true"></div>
+        <section class="cta-section" id="contact">
+            <div class="bento-atmos" aria-hidden="true"><span class="b2"></span><span class="b3"></span></div>
+            <div class="cta-inner">
+                <div class="cta-head reveal">
+                    <h2>Want to be next?</h2>
+                    <p>Emotes, prints, animations or something we have not tried yet.<br>Pick a channel and say hi.</p>
+                </div>
+                <div class="cta-grid">
+                    <a class="cta-card reveal" href="../commissions/">
+                        <i class="fa-regular fa-note-sticky"></i>
+                        <span><span class="cta-label">Commissions</span><span class="cta-sub">Price list & Terms</span></span>
+                    </a>
+                    <a class="cta-card reveal" href="https://discord.com/users/0xgrei" target="_blank" rel="noopener">
+                        <i class="fab fa-discord"></i>
+                        <span><span class="cta-label">Discord</span><span class="cta-sub">0xgrei</span></span>
+                    </a>
+                    <a class="cta-card reveal" href="mailto:hello@asdfgray.com">
+                        <!-- Replace with the real address -->
+                        <i class="far fa-envelope"></i>
+                        <span><span class="cta-label">Email</span><span class="cta-sub">nft.se7en@gmail.com</span></span>
+                    </a>
+                    <a class="cta-card reveal" href="https://twitter.com/messages/compose?recipient_id=0xgrei" target="_blank" rel="noopener">
+                        <i class="fab fa-x-twitter"></i>
+                        <span><span class="cta-label">X DM</span><span class="cta-sub">@0xgrei</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+ 
+
+        <!-- FOOTER LINKS -->
+        <div class="footer">
+            <div class="footer-links text-center">
+                <ol>
+                    <a href="https://www.tiktok.com/@greidraws/" target="_blank"><li><i class="fab fa-tiktok"></i></li></a>
+                    <a href="https://www.instagram.com/grei.draws/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="https://twitter.com/0xgrei" target="_blank"><li><i class="fab fa-twitter"></i></li></a>
+                    <a href="https://www.twitch.tv/grei" target="_blank"><li><i class="fab fa-twitch"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCQJ44JHlnt3OxFtvyOZgteA" target="_blank" hidden><li><i class="fab fa-youtube"></i></li></a>
+                </ol>
+                <small>Copyright &copy; 2016-2026 asdfgray.com. All Rights Reserved</small>
+            </div>
+        </div>
+
+        <div onclick="topFunction()" id="myBtn" title="Go to top" style="display:none;"><div class="d-flex flex-column justify-content-center text-center"><i class="fas fa-angle-up fa-lg m-auto"></i></div></div>
+
+    
+</div><!-- end of page-content -->        
+</body>
+
+    <style>
+        .brand-card{
+            padding: 20px;
+            border-radius: 1em;
+            border: 1px solid rgba(0, 0, 0, .025);
+        }
+        .brand-card:hover{
+            background: rgba(0, 0, 0, .025);
+        }
+        .brand-card h3{
+            margin-bottom:20px;
+        }
+        .brand-card img{
+            max-width: 100%;
+            height: auto;
+            margin-top:10px;
+            border-radius: 1em;
+        }
+        
+    </style>
+    <script>
+               
+/* ---------- Bento motifs ----------
+    Each entry becomes one tile. Fields:
+        src     image url (leave empty for a grey placeholder tile)
+        label   caption shown on hover
+        href    optional link, defaults to the brand section
+        size    "1" square, "2" wide, "half" half height (two halves are stacked automatically)
+        brand   which section the tile belongs to
+*/
+const BENTO = [
+    // The Thumb Dance gif is 24 MB, too heavy for the marquee. Use a still frame here once you have one.
+    { src: "../img/collabs/elgato halloween faceplate.jpg", label: "Custom Halloween Faceplate", size: "2", brand: "elgato" },
+    { src: "../img/collabs/elgato sticker a.jpg", label: "Product Stickers", size: "half", brand: "elgato" },
+    { src: "../img/collabs/elgato sticker b.jpg", label: "Product Stickers", size: "half", brand: "elgato" },
+    { src: "../img/collabs/elgato sticker c.jpg", label: "Product Stickers", size: "1", brand: "elgato" },
+   { src: "../img/animated/cat jump box.gif", label: "Thumb Dance Challenge", size: "1", brand: "elgato" },
+     
+    { src: "../img/collabs/elgato mod appreciation.jpg", label: "Mod Appreciation", size: "1", brand: "elgato" },
+    { src: "../img/collabs/my elgato setup.png", label: "Dream Elgato Setup", size: "2", brand: "elgato" },
+    { src: "", label: "Empty", size: "half", brand: "elgato" },
+    { src: "", label: "Empty", size: "half", brand: "elgato" },
+];
+const BENTO2 = [
+    // The Thumb Dance gif is 24 MB, too heavy for the marquee. Use a still frame here once you have one.
+    { src: "", label: "Something long", size: "2", brand: "elgato" },
+    { src: "../img/collabs/corsair sticker d.jpg", label: "Corsair Scimitar", size: "half", brand: "corsair" },
+    { src: "../img/collabs/corsair sticker c.jpg", label: "Corsair HS80", size: "half", brand: "corsair" },
+    { src: "../img/collabs/corsair sticker a.jpg", label: "Corsair Product Stickers", size: "1", brand: "corsair" },
+    { src: "../img/collabs/elgato catdeck.jpg", label: "Cat Deck", size: "1", brand: "elgato" },
+     
+    { src: "../img/collabs/new merch.png", label: "POGGERS new merch who dis", size: "1", brand: "elgato" },
+    { src: "", label: "Another something long", size: "2", brand: "elgato" },
+    { src: "", label: "Emote", size: "half", brand: "elgato" },
+    { src: "", label: "CutesyHazel", size: "half", brand: "elgato" },
+];
+
+function tile(item) {
+    const a = document.createElement("a");
+    a.className = "bento-tile " + (item.size === "2" ? "w-2" : "w-1") + (item.size === "half" ? " h-half" : "");
+    a.href = item.href || ("#brand-" + item.brand);
+    a.setAttribute("aria-label", item.label);
+    if (item.src) {
+        const img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.label;
+        img.loading = "lazy";
+        a.appendChild(img);
+        const cap = document.createElement("span");
+        cap.className = "bento-caption";
+        cap.textContent = item.label;
+        a.appendChild(cap);
+    } else {
+        a.classList.add("is-placeholder");
+        a.textContent = item.label;
+    }
+    return a;
+}
+
+function buildTrack(items) {
+    const track = document.createElement("div");
+    track.className = "bento-track";
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].size === "half" && items[i + 1] && items[i + 1].size === "half") {
+            const stack = document.createElement("div");
+            stack.className = "bento-stack";
+            stack.appendChild(tile(items[i]));
+            stack.appendChild(tile(items[i + 1]));
+            track.appendChild(stack);
+            i++;
+        } else {
+            track.appendChild(tile(items[i]));
+        }
+    }
+    return track;
+}
+
+function buildRow(items, direction, duration) {
+    const row = document.createElement("div");
+    row.className = "bento-row " + direction;
+    row.style.setProperty("--dur", duration);
+    // Two identical tracks make the loop seamless.
+    row.appendChild(buildTrack(items));
+    row.appendChild(buildTrack(items).cloneNode(true));
+    return row;
+}
+
+const marquee = document.getElementById("bento-wall");
+const reversed = BENTO.slice().reverse();
+const reversed2 = BENTO2.slice().reverse();
+marquee.appendChild(buildRow(BENTO, "to-left", "75s"));
+marquee.appendChild(buildRow(reversed2, "to-right", "90s"));
+marquee.appendChild(buildRow(BENTO2, "to-left", "75s"));
+marquee.appendChild(buildRow(reversed, "to-right", "90s"));
+
+/* ---------- Brand switcher ----------
+    Clicking a logo scrolls to its section. The active logo follows the section in view. */
+
+
+        /* =====================================================================
+           4. CTA reveal and brand switcher
+           ===================================================================== */
+        const reveals = document.querySelectorAll(".reveal");
+        if ("IntersectionObserver" in window) {
+            const ro = new IntersectionObserver(entries => {
+                entries.forEach((e, i) => {
+                    if (e.isIntersecting) {
+                        e.target.style.transitionDelay = (i * 80) + "ms";
+                        e.target.classList.add("is-visible");
+                        ro.unobserve(e.target);
+                    }
+                });
+            }, { threshold: .2 });
+            reveals.forEach(r => ro.observe(r));
+        } else {
+            reveals.forEach(r => r.classList.add("is-visible"));
+        }
+
+        const links = document.querySelectorAll("#brand-switcher a[data-brand]");
+        const sections = document.querySelectorAll(".brand-section[data-brand]");
+
+        // 1. SELECT YOUR ELEMENTS
+const items = document.querySelectorAll('.brand-item'); // The elements swapping "is-active"
+const targetSection = document.querySelector(".brand-section[data-brand]"); // The section to watch
+
+// 1. Helper function to swap the "is-active" class within any group of elements
+function changeActiveElement(targetElement, selectorGroup) {
+  // Find the single element that currently has the active class
+  const currentActive = document.querySelector(`${selectorGroup}.is-active`);
+  
+  // If it exists, remove the active class from it
+  if (currentActive) {
+    currentActive.classList.remove('is-active');
+  }
+  
+  // Add the active class to the newly targeted element
+  targetElement.classList.add('is-active');
+}
+const observerOptions = {
+  root: null, // defaults to the browser viewport
+  threshold: 0.2 // fires when 20% of the section is visible (adjust as needed)
+};
+
+const brandObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const sectionId = entry.target.getAttribute('id');
+      
+      // Find the corresponding navigation link matching the section's ID
+      const matchingLink = document.querySelector(`.brand-item[href="#${sectionId}"]`);
+      
+      if (matchingLink) {
+        // Swap the active class on the nav elements
+        changeActiveElement(matchingLink, '.brand-item');
+      }
+    }
+  });
+}, observerOptions);
+sections.forEach(section => brandObserver.observe(section));
+
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    changeActiveElement(e.currentTarget, '.brand-item');
+  });
+});
+// Start watching the section
+if (targetSection) {
+  brandObserver.observe(targetSection);
+}
+
+        // links.forEach(item => {
+        // item.addEventListener('click', function() {
+        //     // 2. Find the element that currently has "is-active"
+        //     const currentActive = document.querySelector('.is-active');
+            
+        //     // 3. If it exists, remove the class from it
+        //     if (currentActive) {
+        //     currentActive.classList.remove('is-active');
+        //     }
+            
+        //     // 4. Add the class to the newly clicked element
+        //     this.classList.add('is-active');
+        // });
+        // });
+
+        // links.forEach(link => {
+        //     link.classList.remove("is-active");
+        //     link.addEventListener("click", e => {
+        //         const target = document.querySelector(link.getAttribute("href"));
+        //         console.log(target);
+        //         const brand = target.getAttribute("id");
+                
+        //         switch (brand) {
+        //             case "brand-elgato": link.setAttribute("class", "is-active"); break;
+        //             case "brand-corsair": link.setAttribute("class", "is-active"); break;
+        //         }
+                
+        //         // const target = document.querySelector(link.getAttribute("href"));
+        //         if (!target) return;
+        //         e.preventDefault();
+        //         target.scrollIntoView({ behavior: "smooth", block: "start" });
+        //         history.replaceState(null, "", link.getAttribute("href"));
+                
+        //         // link.setAttribute("class", "is-active");
+        //     });
+        // });
+
+        /* =====================================================================
+           2 + 3. Scroll driven chapter transition and vine growth
+           ===================================================================== */
+        const transition = document.getElementById("chapter-transition");
+        // const bloom = transition.querySelector(".bloom");
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+        let ticking = false;
+        function update() {
+            ticking = false;
+            const vh = window.innerHeight;
+
+            // white bloom: grows while the transition block travels through the lower half of the viewport
+            // const tr = transition.getBoundingClientRect();
+            // const tp = clamp((vh - tr.top) / (tr.height + vh * .4), 0, 1);
+            // bloom.style.transform = `scale(${tp})`;
+            // transition.classList.toggle("is-open", tp > .75);
+        }
+        function onScroll() {
+            if (!ticking) { ticking = true; requestAnimationFrame(update); }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        update();
+
+        //STICKY NAVBAR
+        const nav = document.querySelector('.sticky-nav');
+        const sentinel = document.querySelector('.sticky-sentinel');
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the sentinel is NOT visible, the nav is sticking to the top
+            if (!entry.isIntersecting) {
+            nav.classList.add('is-sticky');
+            document.querySelector('#brand-bc').style.display = 'inline';
+            } else {
+            nav.classList.remove('is-sticky');
+            document.querySelector('#brand-bc').style.display = 'none';
+            }
+        });
+        }, {
+        threshold: [0] // Trigger as soon as 1 pixel goes off-screen
+        });
+
+        observer.observe(sentinel);
+
+    </script>
+    <script src="../loader.js"></script>
+    <style>
+         /* =====================================================================
+           2. White chapter transition. A white disc scales up with scroll progress.
+           ===================================================================== */
+        .chapter-transition {
+            position: relative; height: 30vh; margin-top: -150px;
+            overflow: hidden; z-index: 3; pointer-events: none;
+        }
+        .chapter-transition .bloom {
+            display:none;
+            position: absolute; left: 50%; top: 100%;
+            width: 200vmax; height: 200vmax; margin-left: -100vmax; margin-top: -100vmax;
+            border-radius: 50%; background: #fff;
+            transform: scale(0); transform-origin: center;
+            box-shadow: 0 0 120px 60px rgba(255,255,255,.9);
+            will-change: transform;
+        }
+        .chapter-transition .chapter-label {
+            position: absolute; left: 0; right: 0; bottom: 8vh; text-align: center;
+            opacity: 0; transform: translateY(20px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+        .chapter-transition.is-open .chapter-label { opacity: 1; transform: translateY(0); }
+        .chapter-label h3 { font-size: 2.4em; margin: 0; }
+        .chapter-label p { opacity: .6; margin: 6px 0 0; padding: 0; font-size: 1.05em; }
+
+        .brand-info{
+            transform: translateY(0);
+        }
+        .moment-section{
+        }
+        :root {
+            --c-teal:   #2fd3c7;
+            --c-violet: #8b6cff;
+            --c-coral:  #ff7a6e;
+            --c-amber:  #ffc857;
+            --c-sky:    #5fb4ff;
+            --c-ink:    #1a1a1a;
+        }
+        .cta-section .bento-atmos {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            /* background:
+                radial-gradient(60% 50% at 50% 55%, rgba(255,255,255,.9), rgba(255,255,255,0) 70%),
+                linear-gradient(180deg, #fff 0%, #f6f4ff 40%, #f2fbfa 100%); */
+        }
+        .cta-section .bento-atmos span {
+            position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55;
+            /* will-change: transform;
+            animation: drift 26s ease-in-out infinite alternate; */
+        }
+        .bento-atmos .b1 { width: 46vw; height: 46vw; left: -10vw; top: -5%; background: var(--c-violet); }
+        .bento-atmos .b2 { width: 40vw; height: 40vw; right: -8vw; top: 10%; background: var(--c-teal); animation-delay: -9s; }
+        /* .bento-atmos .b3 { width: 34vw; height: 34vw; left: 30vw; bottom: -20%; background: var(--c-coral); opacity: .35; animation-delay: -17s; } */
+        .bento-atmos .b4 { width: 28vw; height: 28vw; right: 20vw; bottom: 0; background: var(--c-amber); opacity: .3; animation-delay: -4s; }
+        @keyframes drift { from { transform: translate(0,0) scale(1); } to { transform: translate(6vw, 4vh) scale(1.12); } }
+        /* =====================================================================
+           4. CTA chapter
+           ===================================================================== */
+        .cta-transition {
+            width: 100vw; margin-left: calc(50% - 50vw); height: 30vh;
+            background: linear-gradient(180deg, #fff 0%, #f6f4ff 100%);
+        }
+        .cta-section {
+            position: relative; width: 100vw; margin-left: calc(50% - 50vw);
+            padding: 40px 6vw 120px; overflow: hidden;
+            margin-bottom:35px;
+            background: linear-gradient(180deg, #f6f4ff 0%, #f1f1f1 100%);
+        }
+        .cta-section .bento-atmos { opacity: .8; }
+        .cta-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+        .cta-head { max-width: 620px; opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+        .cta-head.is-visible { opacity: 1; transform: none; }
+        .cta-head h2 { font-size: clamp(2.2em, 5vw, 4.2em); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 14px; font-weight: 700; }
+        .cta-head p { font-size: 1.15em; opacity: .7; padding: 0; margin: 0; max-width: 46ch; }
+        .cta-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 60px;
+        }
+        .cta-card {
+            position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 30px;
+            min-height: 200px; padding: 22px 22px 20px; border-radius: 14px; text-decoration: none; color: #000;
+            background: #fff; box-shadow: 0 25px 60px -30px rgba(20,10,60,.45);
+            transform: rotate(var(--rot, 0deg)) translateY(var(--y, 0px));
+            transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
+            opacity: 0;
+        }
+        .cta-card.is-visible { opacity: 1; }
+        .cta-card:hover, .cta-card:focus-visible { transform: rotate(0) translateY(-8px); box-shadow: 0 35px 70px -30px rgba(20,10,60,.55); outline: none; text-decoration: none; }
+        .cta-card i { font-size: 2em; }
+        .cta-card .cta-label { font-family: ProductSansBold, Montserrat, sans-serif; font-size: 1.25em; }
+        .cta-card .cta-sub { display: block; font-size: .9em; opacity: .6; margin-top: 4px; }
+        .cta-card::after {
+            content: ""; position: absolute; left: 22px; right: 22px; bottom: 0; height: 4px; border-radius: 4px 4px 0 0;
+            background: var(--accent, var(--c-teal));
+        }
+        .cta-card:nth-child(1) { --rot: -2deg; --y: 10px; --accent: var(--c-coral); }
+        .cta-card:nth-child(2) { --rot: 1.5deg; --y: -6px; --accent: var(--c-violet); }
+        .cta-card:nth-child(3) { --rot: -1deg; --y: 14px; --accent: var(--c-amber); }
+        .cta-card:nth-child(4) { --rot: 2.5deg; --y: -2px; --accent: var(--c-sky); }
+
+        .site-footer { margin-top: 40px; }
+
+        /* moments 2 and 3: framed image + text panel */
+        .moment-card { max-width:1000px; margin:auto; margin-top:10px; display: grid; grid-template-columns: .7fr .8fr; gap: 0; align-items: center;}
+        /* .moment-card.left { grid-template-columns: .9fr 1.1fr; }
+        .moment-card.third { top: 66%; } */
+        .frame {
+            position: relative; transform: rotate(var(--rot, -3deg));
+            transition: transform .7s cubic-bezier(.2,.8,.2,1);
+        }
+        .moment.is-visible .frame { transform: rotate(var(--rot, -3deg)) translateY(0); }
+        .frame::before {
+            /* layered paper behind the image */
+            content: ""; position: absolute; inset: -10px -10px -14px -10px; border-radius: 10px;
+            background: linear-gradient(160deg, var(--f1, var(--c-violet)), var(--f2, var(--c-teal)));
+            transform: rotate(calc(var(--rot, -3deg) * -1.8));
+            opacity: .85; z-index: 0;
+        }
+        .frame img {
+            position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+            border-radius: 8px; border: 8px solid #fff;
+            box-shadow: 0 30px 60px -20px rgba(20,10,60,.45), 0 4px 10px rgba(0,0,0,.08);
+        }
+        .frame .pin {
+            position: absolute; z-index: 2; top: -12px; left: 50%; width: 22px; height: 22px; margin-left: -11px;
+            border-radius: 50%; background: var(--c-coral); box-shadow: 0 3px 6px rgba(0,0,0,.25);
+        }
+        .text-panel {
+            position: relative; z-index: 2;
+            background: #fff; padding: 26px 28px; border-radius: 4px;
+            box-shadow: 0 20px 50px -25px rgba(0,0,0,.35);
+            transform: rotate(var(--prot, 1.5deg)) translate(-8%, 12%);
+        }
+        .moment-card.left .text-panel { transform: rotate(var(--prot, -1.5deg)) translate(8%, -10%); }
+        .text-panel h4 { font-size: 1.35em; margin: 0 0 8px; text-align: left; }
+        .text-panel p { font-size: 1em; text-align: left; opacity: .75; margin: 0; padding: 0; }
+        .text-panel p + p { margin-top: 8px; }
+        .text-panel a { color: #000; font-family: ProductSansBold, Montserrat, sans-serif; }
+        .collab-tag {
+            display: inline-block; font-size: .75em; padding: 3px 10px; border-radius: 10em;
+            background: var(--c-ink); color: #fff; margin-bottom: 10px;
+        }
+        .collab-tag.teal { background: var(--c-teal); color: #062a27; }
+        .collab-tag.violet { background: var(--c-violet); }
+        .collab-tag.coral { background: var(--c-coral); color: #062a27; }
+        .collab-tag.amber { background: var(--c-amber); color: #062a27;}
+        .collab-tag.sky { background: var(--c-sky); }
+        .collab-tag.ink { background: var(--c-ink); }
+
+        @media (min-width: 768px) {
+        .frame {}
+        }
+    </style>
+</html>
