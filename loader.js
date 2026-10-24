@@ -19,6 +19,14 @@ const phrases = [
   "meow meow meow meow...",
   "use code 'GREI' on Elgato.com for 5% off..."
 ];
+// const phrases = [
+//   "Thanks",
+//   "Danke",
+//   "감사합니다",
+//   "ありがとう",
+//   "ขอบคุณค่ะ",
+//   "谢谢"
+// ];
 
 let lastPhrase = "";
 const staggerDelay = 80;    
