@@ -92,7 +92,9 @@
         </div>
         
         
-        <div class="overlay-img" onclick=shush()><img class="img-fluid pixel-cat" src="img/pixel-cat-2.gif"><div class="bubbleset"><div class="hoverCard" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">- shush</div><span class="bubble"></span></div></div>
+        <!-- <div class="overlay-img" onclick=shush()><img class="img-fluid pixel-cat" src="img/animated/loading2.gif"><div class="bubbleset" ><div class="hoverCard" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="500">- shush</div><span class="bubble"></span></div></div>
+          -->
+        <div class="overlay-img"><img class="img-fluid pixel-cat" src="img/animated/loading2.gif"></div>
         <div class="container-fluid">
                 <div class="row" id="header">
                         <div class="col-sm-12 text-center flex-column section-header">
@@ -181,7 +183,9 @@
                 .bubbleset{
                     display: none;
                 }
-                
+                .pixel-cat{
+                    transform: scaleX(-1);
+                }
                 .pixel-cat:hover + .bubbleset{
                     display:block !important;
                 }
