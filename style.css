@@ -155,6 +155,10 @@ p{
     opacity: 1;
     transform: translateY(6px);
 }
+.ns2-icons .img-wrap:hover > .img-caption{
+    opacity: 1;
+    transform: translateY(6px);
+}
 .image-thumbnails img{
     width:100%;
     filter: grayscale(100);
